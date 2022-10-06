@@ -1,0 +1,37 @@
+<section class="courses">
+    {{ with .Site.GetPage "/courses" }}
+    {{ .Content }}
+    {{ range  .Pages.ByWeight  }}
+        <article class="courses__item {{ if .Params.ready -}} courses__item--now {{ end }}">
+            <div class="courses__item-status">{{ cond .Params.ready (T "now") (T "soon") }}</div>
+            <h3 class="courses__item-header">{{ .Title }}</h3>
+            {{ with .Params.timing }}
+            <div class="courses__item-timing">
+                {{ range . }}
+                <span class="courses__item-timing-item">{{ . }}</span>
+                {{ end }}
+            </div>
+            {{ end }}
+            {{ .Content }}
+            {{ with .Params.parts }}
+            <ul class="courses__item-parts">
+                {{ range . }}
+                <li class="courses__item-parts-item">{{ . }}</li>
+                {{ end }}
+            </ul>
+            {{ end }}
+            {{ $btnStyle := cond .Params.ready "tr-white" "brd-red" }}
+            <a href="#consult" class="link-btn" data-style={{ $btnStyle }}>{{ T "consult btn" }}</a>
+            
+        </article>
+    {{ end }}
+    {{ .Params.Finaltext }}
+    <div class="courses__final-btns">
+        <a  href="#consult" 
+        class="link-btn"
+        data-style="red">{{ T "consult btn" }}</a>
+        <a  href="#test" 
+        class="link-btn">{{ T "test btn" }}</a>
+    </div>
+    {{ end }}
+</section>

@@ -1,0 +1,14 @@
+[soon]
+    other = 'Comming soon'
+
+[now]
+    other = 'Sign up today'
+
+['consult btn']
+    other = 'Contact a consultant'
+
+['test btn']
+    other = 'Take a test'
+
+['free consult text']
+    other = 'Free consultation with a career specialist'

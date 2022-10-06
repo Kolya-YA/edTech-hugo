@@ -1,0 +1,19 @@
+.lang-menu {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    &__item {
+        margin-right: 6px;
+
+        a {
+            display: block;
+            text-decoration: none;
+            text-transform: uppercase;
+            padding: 6px 7px 5px;
+            border-radius: 4px;
+            background-color: #ffffffaa;
+        }
+    }
+}

@@ -1,0 +1,30 @@
+
+<div class="main">
+    <div class="main__bg">
+        <!-- We wait background block here -->
+    </div>
+    <section class="main__content">
+        {{ .Content }}
+
+        {{ with .Params.btns }}
+            <ul class="main__btns">
+                {{ range . }}
+                <li class="main__btns-item">
+                <a href="#{{ index . 1 }}" class="link-btn" data-style="{{ index . 2 }}">{{ index . 0 }}</a>
+                </li>
+                {{ end }}
+            </ul>
+        {{ end }}
+        
+        {{ with .Params.cards }}
+            <ul class="main__cards">
+                {{ range . }}
+                <li class="main__cards-item" style="background-image: url(/{{ index . 2 }})">
+                    <div class="main__cards-rect" data-color="{{ index . 1 }}"></div>
+                    <div class="main__cards-text">{{ index . 0 }}</div>                
+                </li>
+                {{ end }}
+            </ul>
+        {{ end }}
+    </section>
+</div>

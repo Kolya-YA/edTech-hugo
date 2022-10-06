@@ -1,0 +1,30 @@
+.link-btn {
+    text-decoration: none;
+    max-width: 320px;
+    width: clamp(240px, 100%, 320px);
+    height: 42px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: inherit;
+    border: 1px solid var(--main-text-color);
+    border-radius: 4px;
+    box-shadow: 0 0 8px -2px var(--btn-grey);
+
+    &[data-style="red"] {
+        color: var(--light-text-color);
+        border-color: var(--main-red);
+        background-color: var(--main-red);
+    }
+
+    &[data-style="tr-white"] {
+        color: var(--light-text-color);
+        border-color: var(--light-text-color);
+        background-color: var(--light-text-color-tr);
+    }
+
+    &[data-style="brd-red"] {
+        border-color: var(--main-red);
+    }
+}

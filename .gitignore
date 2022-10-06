@@ -1,0 +1,28 @@
+.DS_Store
+
+# Generated files by hugo
+/public/
+/resources/_gen/
+/assets/jsconfig.json
+hugo_stats.json
+
+# Temporary lock file while building
+/.hugo_build.lock
+
+# Dependency directories
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+.pnpm-debug.log*
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional stylelint cache
+.stylelintcache

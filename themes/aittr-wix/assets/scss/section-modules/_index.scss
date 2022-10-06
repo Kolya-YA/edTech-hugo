@@ -1,0 +1,24 @@
+.modules {
+    h2 {
+        font-size: 1.6rem;
+        padding: var(--section-padding);
+    }
+
+    h3 {
+        font-size: 1.6rem;
+    }
+
+    @import 'modules-selector';
+    @import 'modules-item';
+    
+
+
+    &__final-btns {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        padding: var(--section-padding) 0;
+        gap: var(--section-padding)
+    }
+  
+}

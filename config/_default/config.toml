@@ -1,0 +1,36 @@
+baseURL = ""
+defaultContentLanguage = 'ru'
+theme = "aittr-wix"
+disableKinds = ["taxonomy", "term"]
+
+[params]
+    logoName = "AIT TR"
+    email = "go@ait-tr.de"
+    phone = "+49 305 201 41 82"
+
+[languages]
+    [languages.ru]
+        contentDir = "content/ru"
+        title = "AIT TR static site"
+        headerAnnounces = [
+            "Начало обучения 31.10.22",
+            "Преподаватели — эксперты из Германии и Израиля",
+            "Группы — до 15 человек",
+            "6 месяцев обучения",
+            "1 месяц разработки проекта",
+            "Поможем найти перспективную работу",
+        ]
+    [languages.en]
+        contentDir = 'content/en'
+        title = "AIT TR static site"
+        headerAnnounces = [
+            "The new course will start on the 31.10.2022",
+            "The tutors are specialists from Germany and Israel",
+            "Groups of up to 15 people",
+            "6 months of training",
+            "1 month project development",
+            "We will help you find a promising job",
+        ]
+    [languages.de]
+        contentDir = 'content/de'
+        title = "AIT TR static site"

@@ -1,0 +1,48 @@
+.courses {
+    padding: var(--section-padding);
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    h3 {
+        font-size: 1.6rem;
+    }
+
+    .courses__item {
+        margin-bottom: var(--section-padding);
+        padding: var(--section-padding);
+        border: 2px solid var(--main-red);
+        border-radius: 2px;
+        background-color: var(--light-text-color);
+
+        &-status {
+            float: right;
+            padding: 3px 5px 2px;
+            color: var(--light-text-color);
+            background-color: var(--main-red);
+            border-radius: 2px;
+        }
+
+        &.courses__item--now {
+            color: var(--light-text-color);
+            background-color: var(--main-red);
+
+            .courses__item-status {
+                color: var(--main-text-color);
+                background-color: var(--light-text-color);
+            }
+        }
+    }
+
+    &__final-btns {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        padding: var(--section-padding) 0;
+        gap: var(--section-padding);
+    }
+
+    // Main content block
+    @import "main__content";
+}

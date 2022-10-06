@@ -1,0 +1,29 @@
+.header-top {
+    height: var(--header-top-height);
+    display: flex;
+    align-items: center;
+    color: var(--light-text-color);
+    padding: 6px 10px;
+    background-color: var(--main-red);
+
+    &__announce {
+        overflow: hidden;
+
+        .announce__list {
+            margin: 0;
+            padding: 0;
+        }
+
+        .announce__item:not(:first-child) {
+            display: none;
+        }
+    }
+
+    &__account {
+        display: none;
+    }
+
+    &__langs {
+        display: none;
+    }
+}

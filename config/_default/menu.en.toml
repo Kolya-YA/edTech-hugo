@@ -1,0 +1,24 @@
+[[top]]
+    name = "Homepage"
+    weight = 10
+    url = "#"
+[[top]]
+    name = "Take a test"
+    weight = 20
+    url = "#"
+[[top]]
+    name = "Funding"
+    weight = 30
+    url = "#"
+[[top]]
+    name = "About us"
+    weight = 40
+    url = "#"
+[[top]]
+    name = "Contacts"
+    weight = 50
+    url = "#"
+[[top]]
+    name = "Blog"
+    weight = 60
+    url = "#"

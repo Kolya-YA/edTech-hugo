@@ -1,0 +1,28 @@
+:root {
+    // Colors
+    --main-red: #bb1919;
+    --main-red-tr: #bb191940;
+    --btn-grey: #618eab;
+    --green: #73bf5f;
+    --green-tr: #73bf5f40;
+    --blue: #0080ff;
+    --yellow: #f6d927;
+    --yellow-tr: #f6d92740;
+    --white: #ffffff;
+    --dark-bgc: #1d1d1d;
+    --dark-overlay-color: #1d1d1db0;
+    --main-text-color: #3b3b3b;
+    --light-text-color: #f2f2f2;
+    --light-text-color-tr: #f2f2f240;
+
+    // Fonts / typo
+    --text-shadow: 0 0 3px var(--dark-bgc);
+    --header-font-family: "Open Sans", sans-serif;
+    --common-font-family: "Open Sans", sans-serif;
+    --footer-font-family: -apple-system, "Open Sans", sans-serif;
+
+    // Other
+    --common-font-size: 17px;
+    --header-top-height: 50px;
+    --section-padding: 1rem;
+}

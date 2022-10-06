@@ -1,0 +1,31 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100vh;
+}
+
+body {
+    min-height: 100vh;
+    min-width: 360px;
+    margin: 0;
+    font-family: var(--common-font-family);
+    font-size: var(--common-font-size);
+    line-height: 1.5em;
+    background-color: var(--body-bg-color);
+    color: var(--main-text-color);
+}
+
+.wrapper {
+    max-width: 480px;
+    margin: 0 auto;
+    border-left: 1px solid var(--light-text-color);
+    border-right: 1px solid var(--light-text-color);
+}
+
+.accent-text {
+    color: var(--main-red);
+}

@@ -1,0 +1,14 @@
+[soon]
+    other = 'Скоро'
+
+[now]
+    other = 'Запишитесь сегодня'
+
+['consult btn']
+    other = 'Связаться с консультантом'
+
+['test btn']
+    other = 'Пройти тест'
+
+['free consult text']
+    other = 'Бесплатная консультация с карьерным консультантом AIT TR'
