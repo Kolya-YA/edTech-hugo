@@ -1,4 +1,4 @@
-baseURL = ""
+baseURL = "https://kolya-ya.github.io/edTech-hugo/"
 defaultContentLanguage = 'ru'
 theme = "aittr-wix"
 disableKinds = ["taxonomy", "term"]

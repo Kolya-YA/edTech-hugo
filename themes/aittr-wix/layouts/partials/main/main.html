@@ -19,7 +19,7 @@
         {{ with .Params.cards }}
             <ul class="main__cards">
                 {{ range . }}
-                <li class="main__cards-item" style="background-image: url(/{{ index . 2 }})">
+                <li class="main__cards-item" style="background-image: url(./images/{{ index . 2 }})">
                     <div class="main__cards-rect" data-color="{{ index . 1 }}"></div>
                     <div class="main__cards-text">{{ index . 0 }}</div>                
                 </li>
