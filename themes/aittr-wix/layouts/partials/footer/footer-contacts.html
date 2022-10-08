@@ -1,0 +1,19 @@
+{{ $linkPhone := replace .Site.Params.Phone " " ""}}
+<div class="footer__contacts">
+    <div class="footer__logo">
+        Logo
+        <div>{{ .Site.Params.logoName }}</div>
+    </div>
+    <div class="footer__address">
+        <div>{{ .Site.Params.address }}</div>
+        <div><a href="tel:{{ $linkPhone }}">{{ .Site.Params.phone }}</a></div>
+        <div><a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a></div>
+    </div>
+    <div class="footer__social">
+        {{ range .Site.Params.Social }}
+        <li class="footer__legacy-item">
+            <a href="{{ .Link | absURL }}" target="_blank">{{ .Name }}</a>
+        </li>
+        {{ end }}
+    </div>
+</div>

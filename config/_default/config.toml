@@ -7,6 +7,22 @@ disableKinds = ["taxonomy", "term"]
     logoName = "AIT TR"
     email = "go@ait-tr.de"
     phone = "+49 305 201 41 82"
+    address = "Linkstraße 2, 10785 Berlin, Germany"
+    [params.social]
+        [params.social.in]
+            name = "LinkedIn"
+            link = "https://www.linkedin.com/company/ait-tr/"
+            icon = ""
+        [params.social.fb]
+            name = "Facebook"
+            link = "https://www.facebook.com/profile.php?id=100085263732597"
+            icon = ""
+        [params.social.instagram]
+            name = "Instagram"
+            link = "https://www.instagram.com/aittr.de/"
+            icon = ""
+
+    
 
 [languages]
     [languages.ru]

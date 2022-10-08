@@ -22,3 +22,54 @@
     name = "Блог"
     weight = 60
     url = "#"
+
+[[footer]]
+    name = "Главная"
+    weight = 10
+    url = "#"
+[[footer]]
+    name = "О школе AIT TR"
+    weight = 20
+    url = "#"
+[[footer]]
+    name = "Наша миссия"
+    weight = 30
+    url = "#"
+[[footer]]
+    name = "Наши курсы"
+    weight = 40
+    url = "#"
+[[footer]]
+    name = "Советы и новости (блог)"
+    weight = 50
+    url = "#"
+
+[[actions]]
+    name = "Пройдите вступительный тест"
+    weight = 10
+    url = "#"
+[[actions]]
+    name = "Запишитесь на консультацию"
+    weight = 20
+    url = "#"
+[[actions]]
+    name = "Узнайте о финансировании"
+    weight = 30
+    url = "#"
+[[actions]]
+    name = "Свяжитесь с нами"
+    weight = 40
+    url = "#"
+
+[[legal]]
+    name = "Impressum"
+    weight = 10
+    url = "#"
+[[legal]]
+    name = "Privacy policy"
+    weight = 20
+    url = "#"
+[[legal]]
+    name = "Datenschutz"
+    weight = 30
+    url = "#"

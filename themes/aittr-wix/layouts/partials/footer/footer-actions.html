@@ -1,0 +1,9 @@
+<div class="footer__actions">
+    <ul class="footer__actions-list">
+        {{ range .Site.Menus.actions }}
+        <li class="footer__actions-item">
+            <a href="{{ .URL }}">{{ .Name }}</a>
+        </li>
+        {{ end }}
+    </ul>
+</div>

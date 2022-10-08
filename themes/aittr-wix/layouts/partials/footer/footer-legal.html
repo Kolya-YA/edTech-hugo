@@ -1,0 +1,9 @@
+<div class="footer__legacy">
+    <ul class="footer__legacy-list">
+        {{ range .Site.Menus.legal }}
+        <li class="footer__legacy-item">
+            <a href="{{ .URL }}">{{ .Name }}</a>
+        </li>
+        {{ end }}
+    </ul>
+</div>

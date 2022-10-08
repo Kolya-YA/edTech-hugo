@@ -22,3 +22,54 @@
     name = "Blog"
     weight = 60
     url = "#"
+
+[[footer]]
+    name = "Home"
+    weight = 10
+    url = "#"
+[[footer]]
+    name = "About AIT TR school"
+    weight = 20
+    url = "#"
+[[footer]]
+    name = "Our goal"
+    weight = 30
+    url = "#"
+[[footer]]
+    name = "Our courses"
+    weight = 40
+    url = "#"
+[[footer]]
+    name = "Tips and News (blog)"
+    weight = 50
+    url = "#"
+
+[[actions]]
+    name = "Take the admissions test"
+    weight = 10
+    url = "#"
+[[actions]]
+    name = "Schedule a consultation"
+    weight = 20
+    url = "#"
+[[actions]]
+    name = "Find out about funding"
+    weight = 30
+    url = "#"
+[[actions]]
+    name = "Contact Us"
+    weight = 40
+    url = "#"
+
+[[legal]]
+    name = "Impressum"
+    weight = 10
+    url = "#"
+[[legal]]
+    name = "Privacy policy"
+    weight = 20
+    url = "#"
+[[legal]]
+    name = "Datenschutz"
+    weight = 30
+    url = "#"
