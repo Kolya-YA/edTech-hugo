@@ -1,3 +1,9 @@
+/* stylelint-disable no-invalid-position-at-import-rule */
 .footer {
-    background-color: var(--yellow-tr);
+    background: conic-gradient(from 0.05turn at 15% -5%, var(--btn-grey), var(--color-tr) 65%);
+
+    @import "footer-contacts";
+    @import "footer-actions";
+    @import "footer-nav";
+    @import "footer-legal";
 }

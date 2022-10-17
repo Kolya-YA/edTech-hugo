@@ -12,15 +12,15 @@ disableKinds = ["taxonomy", "term"]
         [params.social.in]
             name = "LinkedIn"
             link = "https://www.linkedin.com/company/ait-tr/"
-            icon = ""
+            iconName = "linkedin"
         [params.social.fb]
             name = "Facebook"
             link = "https://www.facebook.com/profile.php?id=100085263732597"
-            icon = ""
+            iconName = "facebook"
         [params.social.instagram]
             name = "Instagram"
             link = "https://www.instagram.com/aittr.de/"
-            icon = ""
+            iconName = "instagram"
 
     
 

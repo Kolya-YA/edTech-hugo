@@ -1,0 +1,36 @@
+.footer__legal {
+    padding: var(--section-padding);
+    background: conic-gradient(from 270deg at 35% 110%, var(--main-text-color), var(--dark-bgc) 180deg);
+    color: var(--light-text-color);
+
+    &-list {
+        // max-width: 220px;
+        margin: 0 0 0 auto;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        justify-content: end;
+        flex-wrap: wrap;
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            margin-left: 1em;
+            padding: 5px;
+
+            &:hover {
+                color: var(--yellow);
+            }
+
+            &:focus {
+                outline: none;
+                color: var(--yellow);
+            }
+
+            &:focus-visible {
+                outline: 2px solid var(--yellow);
+                outline-offset: 2px;
+            }
+        }
+    }
+}

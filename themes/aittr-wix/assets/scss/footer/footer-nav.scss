@@ -1,0 +1,32 @@
+.footer__nav {
+    padding: var(--section-padding);
+
+    &-list {
+        margin: 0 0 0 auto;
+        padding: 0;
+        list-style: none;
+        text-align: center;
+
+        a {
+            display: inline-block;
+            text-decoration: none;
+            color: inherit;
+            text-shadow: var(--text-shadow-light);
+            padding: 5px;
+
+            &:hover {
+                color: var(--main-red);
+            }
+
+            &:focus {
+                outline: none;
+                color: var(--main-red);
+            }
+
+            &:focus-visible {
+                outline: 2px solid var(--main-red);
+                outline-offset: 2px;
+            }
+        }
+    }
+}
