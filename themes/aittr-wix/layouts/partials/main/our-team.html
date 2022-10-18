@@ -1,1 +1,18 @@
-<div>Our team</div><hr>
+<section class="team">
+    {{ with .Site.GetPage "/team" }}
+    <div class="team__logo">Team logo</div>
+    {{ .Content }}
+    <ul class="team__list">
+        {{ range .Pages.ByWeight  }}
+        <li class="team__item person">
+            <div>{{ .Title }}</div>
+            <div>{{ .Params.Position }}</div>
+            <div>{{ .Params.Moto }}</div>
+            <div>{{ .Params.LinkedInUrl }}</div>
+            <div class="person__logo">Person logo</div>
+        </li>
+        {{ end }}
+    </ul>
+    {{ end }}
+</section>
+<hr>
