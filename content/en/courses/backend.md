@@ -6,7 +6,7 @@ ready: false
 id: 'backend'
 
 timing: [
-    "6 мес. / 960 академ. часов"
+    "6 months / 960 hours"
 ]
 
 parts: [

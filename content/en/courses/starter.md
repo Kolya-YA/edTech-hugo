@@ -1,12 +1,12 @@
 ---
-date: "2022-10-18"
+date: "2022-06-20"
 title: "Digitale Kompetenz"
 weight: 3
 ready: false
 id: "sarter"
 
 timing: [
-    "1 мес. / 160 академ. часов"
+    "1 month / 160 hours"
 ]
 
 parts: [

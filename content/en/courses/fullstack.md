@@ -6,7 +6,7 @@ ready: true
 id: "fullstack"
 
 timing: [
-    "6 мес. / 960 академ. часов"
+    "6 months / 960 hours"
 ]
 
 parts: [

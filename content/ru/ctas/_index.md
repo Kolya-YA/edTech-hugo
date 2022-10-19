@@ -4,7 +4,7 @@ title: "Call To Actions"
 
 CTAs:
     -   CTA: "Начните уже сейчас"
-        preCTA: "Оставьте заявку обучение"
+        preCTA: "Оставьте заявку на обучение"
         text: "Бесплатная консультация с карьерным специалистом"
         btnLabel: "Забронировать"
         btnColor: "black"
@@ -14,4 +14,3 @@ CTAs:
         btnLabel: "Пройти тест"
         bgColor: "yellow"
 ---
-
