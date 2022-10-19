@@ -1,18 +1,40 @@
 <section class="team">
     {{ with .Site.GetPage "/team" }}
-    <div class="team__logo">Team logo</div>
-    {{ .Content }}
+    <div class="team__logo">
+        <svg><use xlink:href="#logo-min"></use></svg>
+    </div>
+    {{ .Content }} 
     <ul class="team__list">
+        {{ $photos := .Resources.ByType "image" }}
         {{ range .Pages.ByWeight  }}
+        <div>
+        </div>
         <li class="team__item person">
-            <div>{{ .Title }}</div>
-            <div>{{ .Params.Position }}</div>
-            <div>{{ .Params.Moto }}</div>
-            <div>{{ .Params.LinkedInUrl }}</div>
-            <div class="person__logo">Person logo</div>
+            <div class="person__photo">
+                {{ $photo := $photos.GetMatch .Params.photo }}
+                {{ with $photos.GetMatch .Params.photo }}
+                <img src="{{ .RelPermalink }}">
+                {{ end }}
+            </div>
+            <div class="person__moto">{{ .Params.Moto }}</div>
+            <div class="person__info">
+                <div class="person__logo">
+                    <svg><use xlink:href="#logo-medium"></use></svg>
+                </div>
+                <div class="person__text">
+                    <div class="person__text-name">{{ .Title }}</div>
+                    <div class="person__text-position">{{ .Params.Position }}</div>
+                </div>
+                <div class="person__link">
+                    <a href="{{ .Params.LinkedInUrl }}" target="_blank" rel="noopener noreferrer">
+                        <svg width="36px" height="36px">
+                            <use xlink:href="#icon-linkedin"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
         </li>
         {{ end }}
     </ul>
     {{ end }}
 </section>
-<hr>

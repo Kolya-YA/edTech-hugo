@@ -1,0 +1,73 @@
+.person {
+    position: relative;
+    border: 2px solid var(--main-red);
+    border-radius: 2px;
+    background: var(--square-bg);
+    background-size: var(--square-bg-size);
+
+    &__photo {
+        width: 116px;
+        height: 116px;
+        margin-top: calc(var(--section-padding) / 2);
+        margin-left: calc(var(--section-padding) * 2);
+
+        // background-color: #99999920;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__text {
+        align-self: flex-end;
+
+        &-name {
+            font-size: 1.2em;
+            line-height: 1.7;
+            font-weight: 600;
+        }
+
+        &-position {
+            line-height: 1;
+        }
+    }
+
+    &__info {
+        display: flex;
+        gap: var(--section-padding);
+        width: 90%;
+        margin-block: 10px var(--section-padding);
+        margin-inline: auto;
+        padding: 10px;
+        background-color: var(--white);
+        box-shadow: 0 0 6px #999999;
+        border-radius: 8px;
+    }
+
+    &__logo {
+        width: 52px;
+        height: 52px;
+        overflow: hidden;
+
+        // background-color: var(--main-red);
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__link {
+        align-self: flex-end;
+        margin-left: auto;
+        width: 36px;
+        height: 36px;
+        overflow: hidden;
+
+        svg {
+            fill: #0072b1;
+        }
+    }
+}

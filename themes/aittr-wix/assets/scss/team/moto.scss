@@ -1,0 +1,47 @@
+.person__moto {
+    --border-width: 2px;
+    --t-size: 20px;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-inline: auto 8px;
+    margin-block: 8px var(--t-size);
+    padding: 3px 5px;
+    width: 160px;
+    height: auto;
+    background-color: var(--light-text-color);
+    font-size: 0.8em;
+    font-style: italic;
+    line-height: 1.3em;
+    border: var(--border-width) solid var(--main-red);
+    border-radius: 6px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        left: 12%;
+        right: auto;
+        top: auto;
+        bottom: calc(-1 * var(--t-size));
+        border: calc(var(--t-size) / 2) solid transparent;
+        border-left-color: var(--main-red);
+        border-top-color: var(--main-red);
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        left: calc(12% + var(--border-width));
+        right: auto;
+        top: auto;
+        bottom: calc(-1 * (var(--t-size) - var(--border-width) * 2));
+        border: calc(var(--t-size) / 2 - var(--border-width))  solid transparent;
+        border-left-color: var(--light-text-color);
+        border-top-color: var(--light-text-color);
+    }
+}
