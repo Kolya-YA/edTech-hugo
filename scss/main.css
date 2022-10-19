@@ -41,7 +41,9 @@
   --footer-font-family: -apple-system, "Open Sans", sans-serif;
   --common-font-size: 17px;
   --header-top-height: 50px;
-  --section-padding: 1rem; }
+  --section-padding: 1rem;
+  --square-bg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 65 65' %3E%3Crect x='0' y='0' width='65' height='65' fill='%2300000000'/%3E%3Cpath d='M.5.5v12h12V.5H.5zm13 13v12h12v-12h-12zm-13 13v12h12v-12H.5zm26 13v12h12v-12h-12zm13 13v12h12v-12h-12z' fill='%23f6d92710'/%3E%3Cpath d='M26.5.5v12h12V.5h-12zm0 13v12h12v-12h-12zm13 13v12h12v-12h-12zm-39 13v12h12v-12H.5zm0 13v12h12v-12H.5z' fill='%2300000000'/%3E%3Cpath d='M13.5.5v12h12V.5h-12zm39 13v12h12v-12h-12zm-39 13v12h12v-12h-12zm39 0v12h12v-12h-12zm-26 26v12h12v-12h-12z' fill='%23f6d92740'/%3E%3Cpath d='M52.5.5v12h12V.5h-12zm-13 13v12h12v-12h-12zm0 26v12h12v-12h-12zm13 0v12h12v-12h-12zm-39 13v12h12v-12h-12z' fill='%23f6d92720'/%3E%3C/svg%3E");
+  --square-bg-size: 260px; }
 
 *,
 *::before,
@@ -69,6 +71,9 @@ body {
 
 .accent-text {
   color: var(--main-red); }
+
+.svg-icons {
+  display: none; }
 
 .lang-menu {
   display: flex;
@@ -102,6 +107,10 @@ body {
     color: var(--light-text-color);
     border-color: var(--main-red);
     background-color: var(--main-red); }
+  .link-btn[data-style="black"] {
+    color: var(--light-text-color);
+    border-color: var(--light-text-color);
+    background-color: var(--main-text-color); }
   .link-btn[data-style="tr-white"] {
     color: var(--light-text-color);
     border-color: var(--light-text-color);
@@ -375,6 +384,117 @@ body {
   padding: var(--section-padding) 0;
   gap: var(--section-padding); }
 
+.team {
+  --section-logo-size: 82px;
+  padding: var(--section-padding); }
+  .team__logo {
+    float: left;
+    margin-right: var(--section-padding);
+    margin-bottom: var(--section-padding);
+    width: var(--section-logo-size);
+    height: var(--section-logo-size); }
+    .team__logo svg {
+      width: 100%;
+      height: 100%; }
+  .team__list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--section-padding);
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+
+.person {
+  position: relative;
+  border: 2px solid var(--main-red);
+  border-radius: 2px;
+  background: var(--square-bg);
+  background-size: var(--square-bg-size); }
+  .person__photo {
+    width: 116px;
+    height: 116px;
+    margin-top: calc(var(--section-padding) / 2);
+    margin-left: calc(var(--section-padding) * 2); }
+    .person__photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+  .person__text {
+    align-self: flex-end; }
+    .person__text-name {
+      font-size: 1.2em;
+      line-height: 1.7;
+      font-weight: 600; }
+    .person__text-position {
+      line-height: 1; }
+  .person__info {
+    display: flex;
+    gap: var(--section-padding);
+    width: 90%;
+    margin-block: 10px var(--section-padding);
+    margin-inline: auto;
+    padding: 10px;
+    background-color: var(--white);
+    box-shadow: 0 0 6px #999999;
+    border-radius: 8px; }
+  .person__logo {
+    width: 52px;
+    height: 52px;
+    overflow: hidden; }
+    .person__logo svg {
+      width: 100%;
+      height: 100%; }
+  .person__link {
+    align-self: flex-end;
+    margin-left: auto;
+    width: 36px;
+    height: 36px;
+    overflow: hidden; }
+    .person__link svg {
+      fill: #0072b1; }
+
+.person__moto {
+  --border-width: 2px;
+  --t-size: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-inline: auto 8px;
+  margin-block: 8px var(--t-size);
+  padding: 3px 5px;
+  width: 160px;
+  height: auto;
+  background-color: var(--light-text-color);
+  font-size: 0.8em;
+  font-style: italic;
+  line-height: 1.3em;
+  border: var(--border-width) solid var(--main-red);
+  border-radius: 6px; }
+  .person__moto::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 12%;
+    right: auto;
+    top: auto;
+    bottom: calc(-1 * var(--t-size));
+    border: calc(var(--t-size) / 2) solid transparent;
+    border-left-color: var(--main-red);
+    border-top-color: var(--main-red); }
+  .person__moto::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: calc(12% + var(--border-width));
+    right: auto;
+    top: auto;
+    bottom: calc(-1 * (var(--t-size) - var(--border-width) * 2));
+    border: calc(var(--t-size) / 2 - var(--border-width)) solid transparent;
+    border-left-color: var(--light-text-color);
+    border-top-color: var(--light-text-color); }
+
 /* stylelint-disable no-invalid-position-at-import-rule */
 .footer {
   background: conic-gradient(from 0.05turn at 15% -5%, var(--btn-grey), var(--color-tr) 65%); }
@@ -402,8 +522,6 @@ body {
       padding: 0;
       list-style: none;
       display: flex; }
-      .footer .footer__contacts .footer__social-icons {
-        display: none; }
       .footer .footer__contacts .footer__social-item {
         display: block;
         width: 50px;
