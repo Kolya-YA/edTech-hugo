@@ -1,1 +1,32 @@
-<div>Start now</div><hr>
+<hr>
+<section class="start-now">
+    {{ with .Site.GetPage "/start-now" }}
+    <div class="start-now__cta-block">
+        {{ with .Params.preCTA }} <div class="start-now__pre-cta">{{ . }}</div>{{ end }}
+        <h3 class="start-now__cta">{{ .Params.CTA }}</h3>
+        <p class="start-now__text">{{ .Params.text }}</p>
+        <a href="#consult" class="link-btn"
+            {{ with .Params.btnColor }}data-style="{{ . }}"{{ end }}
+        >{{ .Params.btnLabel }}</a>
+    </div>
+    <div class="start-now__reasons">
+        <div class="start-now__symbol">
+            <p>”</p>
+        </div>
+        <ul class="start-now__list">
+            {{ range .Params.reasons }}
+            <li class="start-now__item">{{ . }}</li>
+            {{ end }}
+        </ul>
+        <div class="start-now__selectors">
+            <div class="start-now__selector">◊◊◊◊◊</div>
+        </div>
+    {{ end }}
+    </div>
+    <style>
+        .start-now__symbol {
+            font-size: 8em;
+        }
+    </style>
+</section>
+<hr>
