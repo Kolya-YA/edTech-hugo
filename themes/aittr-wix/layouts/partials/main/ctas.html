@@ -1,0 +1,16 @@
+<hr>
+<section class="ctas">
+    {{ with .Site.GetPage "/ctas" }}
+    {{ range .Params.CTAs }}
+    <div class="cta__item{{ with .bgColor }} cta__item--{{ . }}{{ end }}">
+        {{ with .preCTA }} <div class="ctas__pre-cta">{{ . }}</div>{{ end }}
+        <h3 class="ctas__cta">{{ .CTA }}</h3>
+        <p class="ctas__text">{{ .text }}</p>
+        <a href="#consult" class="link-btn"
+            {{ with .btnColor }}data-style="{{ . }}"{{ end }}
+        >{{ .btnLabel }}</a>
+    </div>
+    {{ end }}
+    {{ end }}
+</section>
+<hr>

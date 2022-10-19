@@ -1,16 +1,17 @@
 {{ define "main" }}
 <main>
-  {{ partial "main/main.html"  . }}
-  {{ partial "main/courses.html"  . }}
-  {{ partial "main/modules.html"  . }}
+    {{ partial "main/main.html"  . }}
+    {{ partial "main/courses.html"  . }}
+    {{ partial "main/modules.html"  . }}
 
-  {{ partial "main/financial-option.html" }}
-  {{ partial "main/job-opprtunities.html" }}
-  {{ partial "main/start-now.html" }}
-  {{ partial "main/certificates.html" }}
-  {{ partial "main/success-stories.html" }}
-  {{ partial "main/our-team.html" . }}
-  {{ partial "main/test.html" }}
-  {{ partial "svg-icons" }}
+    {{ partial "main/financial-option.html" }}
+    {{ partial "main/job-opprtunities.html" }}
+    {{ partial "main/start-now.html" }}
+    {{ partial "main/certificates.html" }}
+    {{ partial "main/success-stories.html" }}
+
+    {{ partial "main/our-team.html" . }}
+    {{ partial "main/ctas.html" . }}
+    {{ partial "svg-icons" }}
 </main>
 {{ end }}
