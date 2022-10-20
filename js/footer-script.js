@@ -54,4 +54,20 @@
       moduleSwitcher(e.target.dataset.moduleId);
     });
   });
+
+  // ns-hugo:/home/runner/work/edTech-hugo/edTech-hugo/themes/aittr-wix/assets/js/modules/separator.js
+  var separators = document.querySelectorAll(".separator");
+  var observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("separator--visible");
+      } else {
+        entry.target.classList.remove("separator--visible");
+      }
+    });
+  });
+  separators.forEach((s) => {
+    s.classList.remove("separator--visible");
+    observer.observe(s);
+  });
 })();

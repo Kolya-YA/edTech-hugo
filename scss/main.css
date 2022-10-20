@@ -34,6 +34,7 @@
   --light-text-color: #f2f2f2;
   --light-text-color-tr: #f2f2f240;
   --color-tr: #00000000;
+  --main-shadow: 0 0 6px #999999;
   --text-shadow: 0 0 3px var(--dark-bgc);
   --text-shadow-light: 0 0 3px var(--light-text-color);
   --header-font-family: "Open Sans", sans-serif;
@@ -118,9 +119,19 @@ body {
   .link-btn[data-style="brd-red"] {
     border-color: var(--main-red); }
 
+.separator {
+  width: 5px;
+  height: 0;
+  box-shadow: var(--main-shadow);
+  margin-block: var(--section-padding);
+  border-bottom: 2px solid var(--btn-grey); }
+  .separator.separator--visible {
+    width: 100%;
+    transition: width 0.5s ease-in-out 0.2s; }
+
 .header {
   position: relative;
-  box-shadow: 0 0 6px #999999; }
+  box-shadow: var(--main-shadow); }
   .header .header-top {
     height: var(--header-top-height);
     display: flex;
