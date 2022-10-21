@@ -1,0 +1,21 @@
+.ctas {
+    display: flex;
+    flex-direction: column;
+    gap: var(--section-padding);
+
+    .ctas__item {
+        padding: var(--section-padding);
+        color: var(--light-text-color);
+        background: var(--red-gradient);
+
+        &.ctas__item--yellow {
+            color: inherit;
+            background: var(--yellow-gradient);
+        }
+
+        h3 {
+            font-size: 1.8em;
+            font-weight: 400;
+        }
+    }
+}

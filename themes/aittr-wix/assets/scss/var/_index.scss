@@ -51,6 +51,9 @@
     --light-text-color-tr: #f2f2f240;
     --color-tr: #00000000;
     --main-shadow: 0 0 6px #999999;
+    --red-gradient: linear-gradient(90deg, var(--main-red) 0%, #7d1111 100%);
+    --yellow-gradient: linear-gradient(90deg, #fff0a9 0%, #ffe052 100%);
+    --yellow-gradient1: linear-gradient(90deg, #fff0a9 0%, var(--yellow) 100%);
 
     // Fonts / typo
     --text-shadow: 0 0 3px var(--dark-bgc);
