@@ -1,2 +1,28 @@
-<div>Certificates</div>
+<section class="certificates">
+    {{ with .Site.GetPage "/certificates" }}
+    <div class="certificates__logo">
+        <svg><use xlink:href="#logo-min"></use></svg>
+    </div>
+    {{ .Content }}
+
+    <ul class="certificates__list">
+        {{ $photos := .Resources.ByType "image" }}
+        {{ range .Pages.ByWeight }}
+        <li class="certificates__item cert">
+            <div class="cert__title">{{ .Title }}</div>
+            <div class="cert__img">
+                {{ $certimg := $photos.GetMatch .Params.cert }}
+                {{ with $certimg }}
+                {{ $img := .Resize "220x webp text" }}
+                <img src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}" loading="lazy">
+                {{ end }}
+            </div>
+            <div class="cert__content">
+                {{ .Content }}                
+            </div>
+        </li>
+        {{ end }}
+    </ul>
+    {{ end }}
+</section>
 {{ partial "separator" }}

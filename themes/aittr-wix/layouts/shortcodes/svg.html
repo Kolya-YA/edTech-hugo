@@ -1,0 +1,7 @@
+{{ $svg := .Get 0 }}
+{{ $width := .Get 1 | default 50 }}
+{{ $height := .Get 2 | default 50 }}
+
+<div style="width: {{ $width }}px; height: {{ $height }}px">
+    {{ $svg  | readFile | safeHTML }}
+</div>
