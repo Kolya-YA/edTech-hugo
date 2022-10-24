@@ -1,2 +1,24 @@
-<div>Job opprtunities</div>
+<section class="job-opprtunities">
+    {{ with .Site.GetPage "/job-opprtunities" }}
+    <h2>{{ .Title }}</h2>
+    {{ .Content }}
+    {{ range  .Pages.ByWeight  }}
+        <article class="job-opprtunities__item">
+            <h3 class="job-opprtunities__item-header">{{ .Title }}</h3>
+            {{ .Content }}
+            {{ with .Params.btn }}
+            <a href="{{ .Link }}" target="_blank" rel="noopener noreferrer" class="link-btn" data-style={{ "none" }}>
+                {{ .Text }}
+            </a>
+            {{ end }}
+            {{ with .Params.Number}}
+            <div class="job-opprtunities__item-number">{{ . }}</div>
+            {{ end }}
+            {{ with .Params.bgPic}}
+            <div class="job-opprtunities__item-bgpic">{{ . }}</div>
+            {{ end }}
+        </article>
+    {{ end }}
+    {{ end }}
+</section>
 {{ partial "separator" }}
