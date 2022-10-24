@@ -35,6 +35,9 @@
   --light-text-color-tr: #f2f2f240;
   --color-tr: #00000000;
   --main-shadow: 0 0 6px #999999;
+  --red-gradient: linear-gradient(90deg, var(--main-red) 0%, #7d1111 100%);
+  --yellow-gradient: linear-gradient(90deg, #fff0a9 0%, #ffe052 100%);
+  --yellow-gradient1: linear-gradient(90deg, #fff0a9 0%, var(--yellow) 100%);
   --text-shadow: 0 0 3px var(--dark-bgc);
   --text-shadow-light: 0 0 3px var(--light-text-color);
   --header-font-family: "Open Sans", sans-serif;
@@ -395,6 +398,51 @@ body {
   padding: var(--section-padding) 0;
   gap: var(--section-padding); }
 
+.start-now {
+  display: flex;
+  flex-direction: column;
+  gap: var(--section-padding); }
+  .start-now__cta-block {
+    padding: var(--section-padding);
+    color: var(--light-text-color);
+    background: var(--red-gradient); }
+    .start-now__cta-block.ctas__item--yellow {
+      color: inherit;
+      background: var(--yellow-gradient); }
+  .start-now h3 {
+    font-size: 1.8em;
+    font-weight: 400; }
+  .start-now__reasons {
+    padding: var(--section-padding);
+    background: var(--yellow-gradient); }
+    .start-now__reasons .start-now__symbol {
+      font-size: 8em;
+      margin-top: 3rem;
+      color: var(--main-red); }
+    .start-now__reasons .start-now__list {
+      min-height: 200px;
+      margin: 0;
+      padding: 0; }
+      .start-now__reasons .start-now__list .start-now__item {
+        display: none;
+        font-size: 1.25em; }
+        .start-now__reasons .start-now__list .start-now__item.start-now__item--active {
+          display: block; }
+    .start-now__reasons .start-now__selectors {
+      display: flex;
+      gap: var(--section-padding);
+      justify-content: center;
+      margin: 0 auto; }
+      .start-now__reasons .start-now__selectors .start-now__selector {
+        width: 32px;
+        height: 32px;
+        border: none;
+        background-color: var(--white);
+        box-shadow: var(--main-shadow);
+        transition: background-color 0.5s; }
+        .start-now__reasons .start-now__selectors .start-now__selector.start-now__selector--active {
+          background-color: var(--main-red); }
+
 .team {
   --section-logo-size: 82px;
   padding: var(--section-padding); }
@@ -505,6 +553,21 @@ body {
     border: calc(var(--t-size) / 2 - var(--border-width)) solid transparent;
     border-left-color: var(--light-text-color);
     border-top-color: var(--light-text-color); }
+
+.ctas {
+  display: flex;
+  flex-direction: column;
+  gap: var(--section-padding); }
+  .ctas .ctas__item {
+    padding: var(--section-padding);
+    color: var(--light-text-color);
+    background: var(--red-gradient); }
+    .ctas .ctas__item.ctas__item--yellow {
+      color: inherit;
+      background: var(--yellow-gradient); }
+    .ctas .ctas__item h3 {
+      font-size: 1.8em;
+      font-weight: 400; }
 
 /* stylelint-disable no-invalid-position-at-import-rule */
 .footer {
