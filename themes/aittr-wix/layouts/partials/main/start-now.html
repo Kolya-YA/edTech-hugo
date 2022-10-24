@@ -9,23 +9,19 @@
         >{{ .Params.btnLabel }}</a>
     </div>
     <div class="start-now__reasons">
-        <div class="start-now__symbol">
-            <p>”</p>
+        <div class="start-now__symbol">”
         </div>
         <ul class="start-now__list">
-            {{ range .Params.reasons }}
-            <li class="start-now__item">{{ . }}</li>
+            {{ range $index, $reason := .Params.reasons }}
+            <li class="start-now__item {{ if not $index }}start-now__item--active{{ end }}">{{ . }}</li>
             {{ end }}
         </ul>
         <div class="start-now__selectors">
-            <div class="start-now__selector">◊◊◊◊◊</div>
         </div>
-    {{ end }}
+        {{ end }}
     </div>
-    <style>
-        .start-now__symbol {
-            font-size: 8em;
-        }
-    </style>
 </section>
+<template id="r-selector">
+    <button class="start-now__selector"></button>
+</template>
 {{ partial "separator" }}
