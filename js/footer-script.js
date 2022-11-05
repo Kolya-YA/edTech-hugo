@@ -1,6 +1,7 @@
 (() => {
   // ns-hugo:/home/runner/work/edTech-hugo/edTech-hugo/themes/aittr-wix/assets/js/modules/top-menu.js
   var navToggler = document.querySelectorAll(".header__nav-toggler");
+  var headerBottom = document.querySelector(".header-bottom");
   var headerNav = document.querySelector(".header__nav");
   navToggler.forEach((tgl) => tgl.addEventListener("click", () => {
     if (document.body.style.position === "fixed") {
@@ -14,6 +15,13 @@
     }
     headerNav.classList.toggle("header__nav--open");
   }));
+  headerBottom.addEventListener("keyup", (e) => {
+    if (e.code === "Escape" && document.body.style.position === "fixed") {
+      document.body.style.position = null;
+      document.body.style.top = null;
+      headerNav.classList.toggle("header__nav--open");
+    }
+  });
 
   // ns-hugo:/home/runner/work/edTech-hugo/edTech-hugo/themes/aittr-wix/assets/js/modules/moto-rotator.js
   var listRotator = (list) => {
