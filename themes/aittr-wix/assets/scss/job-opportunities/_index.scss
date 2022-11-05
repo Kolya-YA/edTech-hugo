@@ -1,0 +1,67 @@
+.job-opportunities {
+    --num-box-size: 76px;
+
+    padding: var(--section-padding);
+
+    &__item {
+        position: relative;
+        aspect-ratio: 1;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: var(--section-padding);
+        padding: var(--section-padding);
+        padding-bottom: var(--num-box-size);
+        border: 1px solid var(--main-text-color);
+        border-radius: 2px;
+        color: var(--main-red);
+
+        .link-btn {
+            margin-top: auto;
+        }
+
+        .job-opportunities__item-number {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: var(--num-box-size);
+            width: var(--num-box-size);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--main-red);
+            border-top-right-radius: 3px;
+            font-size: 2em;
+            color: var(--light-text-color);
+        }
+
+        &--blue {
+            color: var(--blue);
+
+            .job-opportunities__item-number {
+                background-color: var(--blue);
+            }
+        }
+
+        &--green {
+            color: var(--green);
+
+            .job-opportunities__item-number {
+                background-color: var(--green);
+            }
+        }
+
+        &--grey {
+            color: var(--btn-grey);
+
+            .job-opportunities__item-number {
+                background-color: var(--btn-grey);
+            }
+        }
+
+        .job-opportunities__item-bgpic {
+            position: absolute;
+            inset: 0 0 0 0;
+            background-color: var(--btn-grey);
+        }
+    }
+}

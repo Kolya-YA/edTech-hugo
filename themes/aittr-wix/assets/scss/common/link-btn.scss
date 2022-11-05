@@ -18,6 +18,12 @@
         background-color: var(--main-red);
     }
 
+    &[data-style="blue"] {
+        color: var(--light-text-color);
+        border-color: var(--blue);
+        background-color: var(--blue);
+    }
+
     &[data-style="black"] {
         color: var(--light-text-color);
         border-color: var(--light-text-color);

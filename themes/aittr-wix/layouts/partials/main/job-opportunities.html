@@ -1,0 +1,33 @@
+<section class="job-opportunities">
+    {{ with .Site.GetPage "/job-opportunities" }}
+    <h2>{{ .Title }}</h2>
+    {{ .Content }}
+    {{ range  .Pages.ByWeight  }}
+    {{ $color := .Params.color }}
+        <article
+            class="job-opportunities__item{{ with $color }} job-opportunities__item--{{ . }}{{ end -}}">
+            {{ with .Title }}
+            <h3 class="job-opportunities__item-header">{{ . }}</h3>
+            {{ end }}
+            {{ .Content }}
+            {{ with .Params.btn }}
+            <a
+                href="{{ .Link }}" target="_blank"
+                rel="noopener noreferrer" class="link-btn"
+                {{ with $color }} data-style={{ . }} {{ end }}
+                >{{ .Text }}
+            </a>
+            {{ end }}
+            {{ with .Params.Number}}
+            <div class="job-opportunities__item-number">{{ . }}</div>
+            {{ end }}
+            {{ with .Params.bgpic }}
+            <div class="job-opportunities__item-bgpic">
+                <img src="" alt="{{ . }}">           
+            </div>
+            {{ end }}
+        </article>
+    {{ end }}
+    {{ end }}
+</section>
+{{ partial "separator" }}
