@@ -2,10 +2,9 @@
 <html lang="{{ site.LanguageCode | default " en" }}">
 {{- partial "head.html" . -}}
 
-<body>
+<body>    
+    {{- partial "header.html" . -}}
     <div class="wrapper">
-
-        {{- partial "header.html" . -}}
         <div id="content">
             {{- block "main" . }}{{- end }}
         </div>

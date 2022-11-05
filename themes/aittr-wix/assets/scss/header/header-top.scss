@@ -1,17 +1,25 @@
+@media (min-width: 42em) {
+    --top-right-display: block;
+}
+
 .header-top {
     height: var(--header-top-height);
-    display: flex;
-    align-items: center;
     color: var(--light-text-color);
-    padding: 6px 10px;
     background-color: var(--main-red);
 
+    .header-top__block {
+        display: flex;
+        align-items: center;
+    }
+
     &__announce {
+        padding: var(--section-padding);
         overflow: hidden;
 
         .announce__list {
             margin: 0;
             padding: 0;
+            list-style: none;
         }
 
         .announce__item:not(:first-child) {
@@ -20,10 +28,12 @@
     }
 
     &__account {
-        display: none;
+        display: var(--top-right-display, none);
+        margin: var(--section-padding);
+        margin-left: auto;
     }
 
     &__langs {
-        display: none;
+        display: var(--top-right-display, none);
     }
 }

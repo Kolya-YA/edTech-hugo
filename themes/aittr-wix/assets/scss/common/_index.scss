@@ -27,6 +27,12 @@ body {
     border-right: 1px solid var(--light-text-color);
 }
 
+.width-wrapper {
+    width: calc(min(780px, 100vw));
+    min-width: 480px;
+    margin: 0 auto;
+}
+
 .accent-text {
     color: var(--main-red);
 }

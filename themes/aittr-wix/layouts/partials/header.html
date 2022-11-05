@@ -1,61 +1,67 @@
 <header class="header">
-    <div class="width-wrapper">
-        <div class="header-top">
-            <div class="header-top__announce">
-                {{ with .Site.Params.headerAnnounces }}
-                <ul class="announce__list">
-                    {{ range . }}
-                    <li class="announce__item">{{ . }}</li>
+    <div class="header-top">
+        <div class="width-wrapper">
+            <div class="header-top__block">
+                <div class="header-top__announce">
+                    {{ with .Site.Params.headerAnnounces }}
+                    <ul class="announce__list">
+                        {{ range . }}
+                        <li class="announce__item">{{ . }}</li>
+                        {{ end }}
+                    </ul>
                     {{ end }}
-                </ul>
-                {{ end }}
-            </div>
-            <div class="header-top__account">Account</div>
-            <div class="header-top__langs">{{ partial "i18nlist" . }}</div>
-        </div>
-
-        <div class="header-bottom">
-            <div class="header-bottom__logo">
-                {{ partial "svg-logo" }}
-            </div>
-            <div class="header__nav-toggler" id="navShow">
-                <button type="button" aria-label="Menu" aria-expanded="false" aria-controls="mainnav">
-                    <svg xmlns="http://www.w3.org/2000/svg"
-                            width="36" height="22" viewBox="0 0 36 22"
-                            fill="none" stroke="#444" stroke-width="2"
-                            aria-hidden="true">
-                        <path d="M0 1H36"/>
-                        <path d="M0 11H36"/>
-                        <path d="M0 21H36"/>
-                    </svg>
-                </button>
-            </div>
-            <nav class="header__nav" id="mainnav">
-                <div class="header__nav-top">
-                    <div class="header-bottom__lang">
-                        {{ partial "i18nlist" . }}
-                    </div>
-
-                    <div class="header__nav-toggler" id="navHide">
-                        <button type="button" aria-label="Menu" aria-expanded="true" aria-controls="mainnav">
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                            width="36" height="22" viewBox="0 0 36 22"
-                            fill="none" stroke="#444" stroke-width="2">
-                            <path d="M0 1 L36 21"/>
-                            <path d="M0 21 L36 1"/>
-                            </svg>
-                        </button>
-                    </div>
                 </div>
-                
-                <ul class="header__nav-list" role="list">
-                    {{ range .Site.Menus.top }}
-                    <li class="header__nav-item">
-                        <a href="{{ .URL }}">{{ .Name }}</a>
-                    </li>
-                    {{ end }}
-                </ul>
-            </nav>
-        </div>    
+                <div class="header-top__account">Account</div>
+                <div class="header-top__langs">{{ partial "i18nlist" . }}</div>
+            </div>
+        </div>
     </div>
+
+    <div class="header-bottom">
+        <div class="width-wrapper">
+            <div class="header-bottom__block">
+                <div class="header-bottom__logo">
+                    {{ partial "svg-logo" }}
+                </div>
+                <div class="header__nav-toggler" id="navShow">
+                    <button type="button" aria-label="Menu" aria-expanded="false" aria-controls="mainnav">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                                width="36" height="22" viewBox="0 0 36 22"
+                                fill="none" stroke="#444" stroke-width="2"
+                                aria-hidden="true">
+                            <path d="M0 1H36"/>
+                            <path d="M0 11H36"/>
+                            <path d="M0 21H36"/>
+                        </svg>
+                    </button>
+                </div>
+                <nav class="header__nav" id="mainnav">
+                    <div class="header__nav-top">
+                        <div class="header-bottom__lang">
+                            {{ partial "i18nlist" . }}
+                        </div>
+
+                        <div class="header__nav-toggler" id="navHide">
+                            <button type="button" aria-label="Menu" aria-expanded="true" aria-controls="mainnav">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                width="36" height="22" viewBox="0 0 36 22"
+                                fill="none" stroke="#444" stroke-width="2">
+                                <path d="M0 1 L36 21"/>
+                                <path d="M0 21 L36 1"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <ul class="header__nav-list" role="list">
+                        {{ range .Site.Menus.top }}
+                        <li class="header__nav-item">
+                            <a href="{{ .URL }}">{{ .Name }}</a>
+                        </li>
+                        {{ end }}
+                    </ul>
+                </nav>
+            </div>    
+        </div>    
+    </div>    
 </header>

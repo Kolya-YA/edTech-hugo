@@ -1,7 +1,9 @@
 .header-bottom {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
+    .header-bottom__block {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+    }
 
     &__logo {
         line-height: 0;
