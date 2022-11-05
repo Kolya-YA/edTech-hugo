@@ -1,5 +1,5 @@
 @media (min-width: 42em) {
-    --top-right-display: block;
+    --top-right-display: flex;
 }
 
 .header-top {
@@ -10,10 +10,11 @@
     .header-top__block {
         display: flex;
         align-items: center;
+        height: 100%;
     }
 
     &__announce {
-        padding: var(--section-padding);
+        padding: 0 var(--section-padding);
         overflow: hidden;
 
         .announce__list {
@@ -29,7 +30,11 @@
 
     &__account {
         display: var(--top-right-display, none);
-        margin: var(--section-padding);
+        appearance: none;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        margin-right: var(--section-padding);
         margin-left: auto;
     }
 

@@ -28,8 +28,9 @@ body {
 }
 
 .width-wrapper {
-    width: calc(min(780px, 100vw));
+    width: calc(min(880px, 100vw));
     min-width: 480px;
+    height: 100%;
     margin: 0 auto;
 }
 
