@@ -19,24 +19,25 @@
                 {{ partial "svg-logo" }}
             </div>
             <div class="header__nav-toggler" id="navShow">
-                <button>
+                <button type="button" aria-label="Menu" aria-expanded="false" aria-controls="mainnav">
                     <svg xmlns="http://www.w3.org/2000/svg"
                             width="36" height="22" viewBox="0 0 36 22"
-                            fill="none" stroke="#444" stroke-width="2">
+                            fill="none" stroke="#444" stroke-width="2"
+                            aria-hidden="true">
                         <path d="M0 1H36"/>
                         <path d="M0 11H36"/>
                         <path d="M0 21H36"/>
                     </svg>
                 </button>
             </div>
-            <nav class="header__nav">
+            <nav class="header__nav" id="mainnav">
                 <div class="header__nav-top">
                     <div class="header-bottom__lang">
                         {{ partial "i18nlist" . }}
                     </div>
 
                     <div class="header__nav-toggler" id="navHide">
-                        <button>
+                        <button type="button" aria-label="Menu" aria-expanded="true" aria-controls="mainnav">
                             <svg xmlns="http://www.w3.org/2000/svg"
                             width="36" height="22" viewBox="0 0 36 22"
                             fill="none" stroke="#444" stroke-width="2">
@@ -47,7 +48,7 @@
                     </div>
                 </div>
                 
-                <ul class="header__nav-list">
+                <ul class="header__nav-list" role="list">
                     {{ range .Site.Menus.top }}
                     <li class="header__nav-item">
                         <a href="{{ .URL }}">{{ .Name }}</a>

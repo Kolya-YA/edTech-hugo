@@ -1,4 +1,5 @@
 const navToggler = document.querySelectorAll('.header__nav-toggler');
+const headerBottom = document.querySelector('.header-bottom');
 const headerNav = document.querySelector('.header__nav');
 
 navToggler.forEach((tgl) => tgl.addEventListener('click', () => {
@@ -13,6 +14,14 @@ navToggler.forEach((tgl) => tgl.addEventListener('click', () => {
     }
     headerNav.classList.toggle('header__nav--open');
 }));
+
+headerBottom.addEventListener('keyup', (e) => {
+    if (e.code === 'Escape' && document.body.style.position === 'fixed') {
+        document.body.style.position = null;
+        document.body.style.top = null;
+        headerNav.classList.toggle('header__nav--open');
+    }
+});
 
 // navHideBtn.addEventListener('click', () => {
 // navTop.addEventListener('click', (e) => {

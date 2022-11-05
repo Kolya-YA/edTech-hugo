@@ -2,13 +2,16 @@
 <html lang="{{ site.LanguageCode | default " en" }}">
 {{- partial "head.html" . -}}
 
-<body class="wrapper">
-    {{- partial "header.html" . -}}
-    <div id="content">
-        {{- block "main" . }}{{- end }}
+<body>
+    <div class="wrapper">
+
+        {{- partial "header.html" . -}}
+        <div id="content">
+            {{- block "main" . }}{{- end }}
+        </div>
+        {{- partial "footer/footer" . -}}
+        {{- partial "footer-scripts.html" . -}}
     </div>
-    {{- partial "footer/footer" . -}}
-    {{- partial "footer-scripts.html" . -}}
 </body>
 
 </html>
