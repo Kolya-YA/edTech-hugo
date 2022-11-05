@@ -1,7 +1,6 @@
 {{ define "main" }}
 <main>
     <div class="wrapper">
-
         {{ partial "main/main.html"  . }}
         {{ partial "main/courses.html"  . }}
         {{ partial "main/modules.html"  . }}
@@ -15,8 +14,11 @@
         {{ partial "main/success-stories.html" }}
         
         {{ partial "main/our-team.html" . }}
-        {{ partial "main/ctas.html" . }}
-        {{ partial "svg-icons" }}
     </div>
+    {{ partial "separator" }}
+    <div class="width-wrapper">
+        {{ partial "main/ctas.html" . }}
+    </div>
+    {{ partial "svg-icons" }}
 </main>
 {{ end }}

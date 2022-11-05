@@ -2,7 +2,7 @@
     {{ with .Site.GetPage "/ctas" }}
     {{ range .Params.CTAs }}
     <div class="ctas__item{{ with .bgColor }} ctas__item--{{ . }}{{ end }}">
-        {{ with .preCTA }} <div class="ctas__pre-cta">{{ . }}</div>{{ end }}
+         <div class="ctas__pre-cta"> {{ .preCTA }}</div>
         <h3 class="ctas__cta">{{ .CTA }}</h3>
         <p class="ctas__text">{{ .text }}</p>
         <a href="#consult" class="link-btn"

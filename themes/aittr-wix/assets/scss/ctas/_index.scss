@@ -1,21 +1,40 @@
 .ctas {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: var(--section-padding);
+    padding: 0 var(--section-padding);
 
     .ctas__item {
+        display: flex;
+        flex-direction: column;
         padding: var(--section-padding);
         color: var(--light-text-color);
         background: var(--red-gradient);
+        min-width: 280px;
+        flex: 1 0 0;
+
+        &:nth-child(odd) {
+            flex-grow: 2;
+        }
 
         &.ctas__item--yellow {
             color: inherit;
             background: var(--yellow-gradient);
         }
 
-        h3 {
+        .ctas__pre-cta {
+            text-align: end;
+        }
+
+        .ctas__cta {
             font-size: 1.8em;
             font-weight: 400;
+            line-height: 1.2em;
+            margin-block: .7em;
+        }
+
+        & > *:last-child {
+            margin-top: auto;
         }
     }
 }
