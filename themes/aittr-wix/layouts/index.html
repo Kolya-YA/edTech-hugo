@@ -1,19 +1,22 @@
 {{ define "main" }}
 <main>
-    {{ partial "main/main.html"  . }}
-    {{ partial "main/courses.html"  . }}
-    {{ partial "main/modules.html"  . }}
+    <div class="wrapper">
 
-    {{ partial "main/financial-option.html" }}
-    
-    {{ partial "main/job-opportunities.html" . }}
-    {{ partial "main/start-now.html" . }}
-    {{ partial "main/certificates.html" . }}
-    
-    {{ partial "main/success-stories.html" }}
-
-    {{ partial "main/our-team.html" . }}
-    {{ partial "main/ctas.html" . }}
-    {{ partial "svg-icons" }}
+        {{ partial "main/main.html"  . }}
+        {{ partial "main/courses.html"  . }}
+        {{ partial "main/modules.html"  . }}
+        
+        {{ partial "main/financial-option.html" }}
+        
+        {{ partial "main/job-opportunities.html" . }}
+        {{ partial "main/start-now.html" . }}
+        {{ partial "main/certificates.html" . }}
+        
+        {{ partial "main/success-stories.html" }}
+        
+        {{ partial "main/our-team.html" . }}
+        {{ partial "main/ctas.html" . }}
+        {{ partial "svg-icons" }}
+    </div>
 </main>
 {{ end }}

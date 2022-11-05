@@ -1,6 +1,10 @@
 <footer class="footer">
-    {{ partial "footer/footer-nav" . }}
-    {{ partial "footer/footer-actions" . }}
-    {{ partial "footer/footer-contacts" . }}
+    <div class="width-wrapper">
+        <div class="footer-top">
+            {{ partial "footer/footer-nav" . }}
+            {{ partial "footer/footer-actions" . }}
+            {{ partial "footer/footer-contacts" . }}
+        </div>
+    </div>
     {{ partial "footer/footer-legal" . }}
 </footer>

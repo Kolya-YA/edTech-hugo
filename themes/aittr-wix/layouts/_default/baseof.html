@@ -1,16 +1,14 @@
 <!DOCTYPE html>
-<html lang="{{ site.LanguageCode | default " en" }}">
+<html lang="{{ site.LanguageCode | default "en" }}">
 {{- partial "head.html" . -}}
 
 <body>    
     {{- partial "header.html" . -}}
-    <div class="wrapper">
-        <div id="content">
-            {{- block "main" . }}{{- end }}
-        </div>
-        {{- partial "footer/footer" . -}}
-        {{- partial "footer-scripts.html" . -}}
+    <div id="content">
+        {{- block "main" . }}{{- end }}
     </div>
+    {{ partial "separator" }}
+    {{- partial "footer/footer" . -}}
+    {{- partial "footer-scripts.html" . -}}
 </body>
-
 </html>

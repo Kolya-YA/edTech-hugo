@@ -5,13 +5,13 @@
         margin: 0;
         padding: 0;
         list-style: none;
-        text-align: center;
+        text-align: var(--menu-text-alighn, center);
 
         a {
             display: inline-block;
             text-decoration: none;
             color: inherit;
-            text-shadow: var(--text-shadow-light);
+            // text-shadow: var(--text-shadow-light);
             padding: 5px;
 
             &:hover {

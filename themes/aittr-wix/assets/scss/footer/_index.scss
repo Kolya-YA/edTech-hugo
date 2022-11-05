@@ -1,9 +1,23 @@
 /* stylelint-disable no-invalid-position-at-import-rule */
+@media (min-width: 42em) {
+    .footer-top {
+        --footer-top-display: flex;
+        --menu-text-alighn: start;
+    }
+}
+
 .footer {
     background: conic-gradient(from 0.05turn at 15% -5%, var(--btn-grey), var(--color-tr) 65%);
 
-    @import "footer-contacts";
-    @import "footer-actions";
-    @import "footer-nav";
+    &-top {
+        display: var(--footer-top-display, box);
+        justify-content: space-between;
+        padding-top: var(--section-padding);
+
+        @import "footer-nav";
+        @import "footer-actions";
+        @import "footer-contacts";
+    }
+
     @import "footer-legal";
 }

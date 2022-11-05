@@ -1,9 +1,11 @@
 <div class="footer__legal">
-    <ul class="footer__legal-list">
-        {{ range .Site.Menus.legal }}
-        <li class="footer__legal-item">
-            <a href="{{ .URL }}">{{ .Name }}</a>
-        </li>
-        {{ end }}
-    </ul>
+    <div class="width-wrapper">
+        <ul class="footer__legal-list">
+            {{ range .Site.Menus.legal }}
+            <li class="footer__legal-item">
+                <a href="{{ .URL }}">{{ .Name }}</a>
+            </li>
+            {{ end }}
+        </ul>
+    </div>
 </div>
