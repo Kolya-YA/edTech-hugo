@@ -111,6 +111,10 @@ body {
     color: var(--light-text-color);
     border-color: var(--main-red);
     background-color: var(--main-red); }
+  .link-btn[data-style="blue"] {
+    color: var(--light-text-color);
+    border-color: var(--blue);
+    background-color: var(--blue); }
   .link-btn[data-style="black"] {
     color: var(--light-text-color);
     border-color: var(--light-text-color);
@@ -442,6 +446,52 @@ body {
         transition: background-color 0.5s; }
         .start-now__reasons .start-now__selectors .start-now__selector.start-now__selector--active {
           background-color: var(--main-red); }
+
+.job-opportunities {
+  --num-box-size: 76px;
+  padding: var(--section-padding); }
+  .job-opportunities__item {
+    position: relative;
+    aspect-ratio: 1;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: var(--section-padding);
+    padding: var(--section-padding);
+    padding-bottom: var(--num-box-size);
+    border: 1px solid var(--main-text-color);
+    border-radius: 2px;
+    color: var(--main-red); }
+    .job-opportunities__item .link-btn {
+      margin-top: auto; }
+    .job-opportunities__item .job-opportunities__item-number {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: var(--num-box-size);
+      width: var(--num-box-size);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--main-red);
+      border-top-right-radius: 3px;
+      font-size: 2em;
+      color: var(--light-text-color); }
+    .job-opportunities__item--blue {
+      color: var(--blue); }
+      .job-opportunities__item--blue .job-opportunities__item-number {
+        background-color: var(--blue); }
+    .job-opportunities__item--green {
+      color: var(--green); }
+      .job-opportunities__item--green .job-opportunities__item-number {
+        background-color: var(--green); }
+    .job-opportunities__item--grey {
+      color: var(--btn-grey); }
+      .job-opportunities__item--grey .job-opportunities__item-number {
+        background-color: var(--btn-grey); }
+    .job-opportunities__item .job-opportunities__item-bgpic {
+      position: absolute;
+      inset: 0 0 0 0;
+      background-color: var(--btn-grey); }
 
 .team {
   --section-logo-size: 82px;
