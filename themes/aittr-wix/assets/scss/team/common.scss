@@ -3,12 +3,15 @@
 
     padding: var(--section-padding);
 
+    &__header {
+        display: flex;
+        gap: var(--section-padding);
+    }
+
     &__logo {
-        float: left;
-        margin-right: var(--section-padding);
-        margin-bottom: var(--section-padding);
         width: var(--section-logo-size);
         height: var(--section-logo-size);
+        flex-shrink: 0;
 
         svg {
             width: 100%;
