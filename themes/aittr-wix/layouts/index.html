@@ -3,16 +3,19 @@
     <div class="wrapper">
         {{ partial "main/main.html"  . }}
     </div>
-
     {{ partial "separator" }}
+
     <div class="width-wrapper">
         {{ partial "main/courses.html"  . }}
     </div>
     {{ partial "separator" }}
-
-    <div class="wrapper">
+    
+    <div class="width-wrapper">
         {{ partial "main/modules.html"  . }}
-        
+    </div>
+    {{ partial "separator" }}
+    
+    <div class="wrapper">
         {{ partial "main/financial-option.html" }}
         
         {{ partial "main/job-opportunities.html" . }}

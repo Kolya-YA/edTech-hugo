@@ -1,23 +1,24 @@
 <section class="modules">
     {{ with .Site.GetPage "/modules" }}
     {{ .Content }}
-    <div class="modules__selector">
-        {{ range $index, $module := .Pages.ByWeight  }}
+    <div class="modules__blocks">
+        <div class="modules__selector">
+            {{ range $index, $module := .Pages.ByWeight  }}
             <div class="modules__selector-item {{ if not $index }}modules__selector-item--active{{ end }}"
-                data-color="{{ $module.Params.Color }}"
-                data-module-id="moduleId-{{ $module.Weight }}">
-                {{ $module.Weight }}
-            </div>
+            data-color="{{ $module.Params.Color }}"
+            data-module-id="moduleId-{{ $module.Weight }}">
+            {{ $module.Weight }}
+        </div>
         {{ end }}
     </div>
     {{ range $index, $module := .Pages.ByWeight  }}
-        <div class="modules__item {{ if not $index }}modules__item--active{{ end }}"
-            data-color="{{ $module.Params.Color }}" data-module-id="moduleId-{{ $module.Weight  }}">
-            <h3 class="modules__item-header">{{ .Title }}</h3>
-            {{ with .Params.timing }}
-            <h4 class="modules__item-timing">{{ . }}</h4>
-            {{ end }}
-
+    <div class="modules__item {{ if not $index }}modules__item--active{{ end }}"
+    data-color="{{ $module.Params.Color }}" data-module-id="moduleId-{{ $module.Weight  }}">
+    <h3 class="modules__item-header">{{ .Title }}</h3>
+    {{ with .Params.timing }}
+    <h4 class="modules__item-timing">{{ . }}</h4>
+    {{ end }}
+    
             {{ with .Params.shifts }}
             <ul class="modules__item-shifts">
                 {{ range . }}
@@ -25,7 +26,7 @@
                 {{ end }}
             </ul>
             {{ end }}
-
+            
             {{ with .Params.parts }}
             <ul class="modules__item-parts">
                 {{ range . }}
@@ -33,18 +34,21 @@
                 {{ end }}
             </ul>
             {{ end }}
+            
             <div class="modules__item-content">
                 {{ .Content }}
             </div>
             <div class="courses__final-btns">
                 <p>{{ T "free consult text" }}</p>
-                <a
-                    href="#consult" class="link-btn"
-                    data-style={{ cond (eq $module.Params.Color "red") "tr-white" "red" }}
+                <a href="#consult" class="link-btn"
+                data-style={{ cond (eq $module.Params.Color "red") "tr-white" "red" }}
                 >{{ T "consult btn" }}</a>
             </div>
         </div>
-    {{ end }}
+        {{ end }}
+        <div class="modules__decor">
+            Please wait, they are still editing the video.
+        </div>
+    </div>
     {{ end }}
 </section>
-{{ partial "separator" }}

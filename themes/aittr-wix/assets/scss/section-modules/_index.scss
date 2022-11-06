@@ -1,4 +1,22 @@
+/* stylelint-disable no-invalid-position-at-import-rule */
+@media (min-width: 40em) {
+    .modules {
+        --blocks-gap: var(--section-padding);
+        --blocks-direction: row;
+        --selector-direction: column;
+        --selector-flex: 0 0 140px;
+    }
+}
+
+@media (min-width: 52em) {
+    .modules {
+        --display-decor: block;
+    }
+}
+
 .modules {
+    padding: var(--section-padding);
+
     h2 {
         font-size: 1.6rem;
         padding: var(--section-padding);
@@ -8,17 +26,28 @@
         font-size: 1.6rem;
     }
 
-    @import 'modules-selector';
-    @import 'modules-item';
-    
+    &__blocks {
+        display: flex;
+        flex-direction: var(--blocks-direction, column);
+        gap: var(--blocks-gap, 0);
+    }
 
+    @import "modules-selector";
+    @import "modules-item";
+
+    &__decor {
+        flex: 1 0 0;
+        display: var(--display-decor, none);
+        background: var(--main-blue-2);
+        color: var(--light-text-color);
+
+    }
 
     &__final-btns {
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-start;
         padding: var(--section-padding) 0;
-        gap: var(--section-padding)
+        gap: var(--section-padding);
     }
-  
 }
