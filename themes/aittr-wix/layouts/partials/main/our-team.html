@@ -7,8 +7,6 @@
     <ul class="team__list">
         {{ $photos := .Resources.ByType "image" }}
         {{ range .Pages.ByWeight  }}
-        <div>
-        </div>
         <li class="team__item person">
             <div class="person__photo">
                 {{ $photo := $photos.GetMatch .Params.photo }}

@@ -1,7 +1,6 @@
 .team {
     --section-logo-size: 82px;
 
-
     padding: var(--section-padding);
 
     &__logo {
@@ -18,8 +17,10 @@
     }
 
     &__list {
-        display: flex;
-        flex-direction: column;
+        // display: flex;
+        // flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
         gap: var(--section-padding);
         margin: 0;
         padding: 0;

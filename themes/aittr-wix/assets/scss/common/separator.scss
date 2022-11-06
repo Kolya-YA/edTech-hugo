@@ -1,12 +1,12 @@
 .separator {
-    width: 5px;
+    width: 0;
     height: 0;
     box-shadow: var(--main-shadow);
-    margin-block: var(--section-padding);
+    margin-block: calc(var(--section-padding) / 2);
     border-bottom: 2px solid var(--btn-grey);
 
     &.separator--visible {
         width: 100%;
-        transition: width 0.5s ease-in-out 0.2s;
+        transition: width 0.5s ease-in-out 0.3s;
     }
 }
