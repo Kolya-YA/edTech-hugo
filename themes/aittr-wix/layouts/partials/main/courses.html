@@ -1,7 +1,8 @@
 <section class="courses">
     {{ with .Site.GetPage "/courses" }}
     {{ .Content }}
-    {{ range  .Pages.ByWeight  }}
+    <div class="courses__list">
+        {{ range  .Pages.ByWeight  }}
         <article class="courses__item {{ if .Params.ready -}} courses__item--now {{ end }}">
             <div class="courses__item-status">{{ cond .Params.ready (T "now") (T "soon") }}</div>
             <h3 class="courses__item-header">{{ .Title }}</h3>
@@ -22,17 +23,17 @@
             {{ end }}
             {{ $btnStyle := cond .Params.ready "tr-white" "brd-red" }}
             <a href="#consult" class="link-btn" data-style={{ $btnStyle }}>{{ T "consult btn" }}</a>
-            
         </article>
-    {{ end }}
-    {{ .Params.Finaltext }}
-    <div class="courses__final-btns">
-        <a  href="#consult" 
-        class="link-btn"
-        data-style="red">{{ T "consult btn" }}</a>
-        <a  href="#test" 
-        class="link-btn">{{ T "test btn" }}</a>
+        {{ end }}
+    </div>
+    {{ with .Params.Finaltext }}
+    <div class="courses__final-text">
+        {{ . }}
+        <div class="courses__final-btns">
+            <a  href="#consult" class="link-btn" data-style="red">{{ T "consult btn" }}</a>
+            <a  href="#test" class="link-btn">{{ T "test btn" }}</a>
+        </div>
     </div>
     {{ end }}
+    {{ end }}
 </section>
-{{ partial "separator" }}

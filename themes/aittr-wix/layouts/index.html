@@ -2,7 +2,15 @@
 <main>
     <div class="wrapper">
         {{ partial "main/main.html"  . }}
+    </div>
+
+    {{ partial "separator" }}
+    <div class="width-wrapper">
         {{ partial "main/courses.html"  . }}
+    </div>
+    {{ partial "separator" }}
+
+    <div class="wrapper">
         {{ partial "main/modules.html"  . }}
         
         {{ partial "main/financial-option.html" }}

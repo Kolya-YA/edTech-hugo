@@ -9,15 +9,24 @@
         font-size: 1.6rem;
     }
 
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+        gap: var(--section-padding);
+        margin-block: var(--section-padding);
+    }
+
     .courses__item {
-        margin-bottom: var(--section-padding);
+        display: flex;
+        flex-direction: column;
         padding: var(--section-padding);
         border: 2px solid var(--main-red);
         border-radius: 2px;
         background-color: var(--light-text-color);
 
         &-status {
-            float: right;
+            // float: right;
+            align-self: flex-end;
             padding: 3px 5px 2px;
             color: var(--light-text-color);
             background-color: var(--main-red);
@@ -33,13 +42,25 @@
                 background-color: var(--light-text-color);
             }
         }
+
+        & > *:last-child {
+            margin-top: auto;
+        }
     }
 
+    &__final-text {
+        width: calc(min(760px, 100%));
+        margin-inline: auto;
+        padding: var(--section-padding);
+        background-color: var(--yellow-tr);
+        border-radius:4px;
+    }
+    
     &__final-btns {
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-start;
-        padding: var(--section-padding) 0;
+        margin-top: var(--section-padding);
         gap: var(--section-padding);
     }
 
