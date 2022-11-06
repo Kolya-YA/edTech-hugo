@@ -1,16 +1,20 @@
 .start-now {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: var(--section-padding);
+    padding: var(--section-padding);
 
     &__cta-block {
+        display: flex;
+        flex-direction: column;
+        flex: 1 0 0;
+        min-width: 280px;
         padding: var(--section-padding);
         color: var(--light-text-color);
         background: var(--red-gradient);
 
-        &.ctas__item--yellow {
-            color: inherit;
-            background: var(--yellow-gradient);
+        & > *:last-child {
+            margin-top: auto;
         }
     }
 
@@ -20,6 +24,7 @@
     }
 
     &__reasons {
+        flex: 2 0 0;
         padding: var(--section-padding);
         background: var(--yellow-gradient);
 
@@ -54,12 +59,17 @@
                 width: 32px;
                 height: 32px;
                 border: none;
+                border-radius: 2px;
                 background-color: var(--white);
                 box-shadow: var(--main-shadow);
-                transition: background-color 0.5s;
-
+                transition: background-color 0.5s, transform 0.5s;
+                cursor: pointer;
+                
                 &.start-now__selector--active {
                     background-color: var(--main-red);
+                    transform: scale(1.1);
+                    rotate: 90deg;
+                    transition: rotate 0.6s;
                 }
             }
         }

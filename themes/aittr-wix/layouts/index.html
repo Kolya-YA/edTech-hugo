@@ -8,7 +8,14 @@
         {{ partial "main/financial-option.html" }}
         
         {{ partial "main/job-opportunities.html" . }}
+    </div>
+    
+    {{ partial "separator" }}
+    <div class="width-wrapper">
         {{ partial "main/start-now.html" . }}
+    </div>
+    {{ partial "separator" }}
+    <div class="wrapper">
         {{ partial "main/certificates.html" . }}
         
         {{ partial "main/success-stories.html" }}
@@ -21,6 +28,5 @@
     <div class="width-wrapper">
         {{ partial "main/ctas.html" . }}
     </div>
-    {{ partial "svg-icons" }}
 </main>
 {{ end }}
