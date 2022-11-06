@@ -76,7 +76,7 @@ body {
 
 .width-wrapper {
   width: calc(min(1280px, 100vw));
-  min-width: 480px;
+  min-width: 360px;
   height: 100%;
   margin: 0 auto; }
 
@@ -210,7 +210,7 @@ body {
     display: flex;
     flex-direction: column;
     visibility: var(--nav-visibility, hidden);
-    position: var(--desktop-position, absolute);
+    position: var(--desktop-position, fixed);
     transform: var(--desktop-transform, translateX(100%));
     transition: var(--desktop-transform, transform 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55), visibility 0.3s linear);
     top: var(--header-top-height);
@@ -296,14 +296,20 @@ body {
     font-size: 1.6rem; }
   .courses h3 {
     font-size: 1.6rem; }
+  .courses__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+    gap: var(--section-padding);
+    margin-block: var(--section-padding); }
   .courses .courses__item {
-    margin-bottom: var(--section-padding);
+    display: flex;
+    flex-direction: column;
     padding: var(--section-padding);
     border: 2px solid var(--main-red);
     border-radius: 2px;
     background-color: var(--light-text-color); }
     .courses .courses__item-status {
-      float: right;
+      align-self: flex-end;
       padding: 3px 5px 2px;
       color: var(--light-text-color);
       background-color: var(--main-red);
@@ -314,11 +320,19 @@ body {
       .courses .courses__item.courses__item--now .courses__item-status {
         color: var(--main-text-color);
         background-color: var(--light-text-color); }
+    .courses .courses__item > *:last-child {
+      margin-top: auto; }
+  .courses__final-text {
+    width: calc(min(760px, 100%));
+    margin-inline: auto;
+    padding: var(--section-padding);
+    background-color: var(--yellow-tr);
+    border-radius: 4px; }
   .courses__final-btns {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    padding: var(--section-padding) 0;
+    margin-top: var(--section-padding);
     gap: var(--section-padding); }
   .courses .main__content {
     padding: 1rem; }
@@ -445,19 +459,24 @@ body {
 
 .start-now {
   display: flex;
-  flex-direction: column;
-  gap: var(--section-padding); }
+  flex-wrap: wrap;
+  gap: var(--section-padding);
+  padding: var(--section-padding); }
   .start-now__cta-block {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 0;
+    min-width: 280px;
     padding: var(--section-padding);
     color: var(--light-text-color);
     background: var(--red-gradient); }
-    .start-now__cta-block.ctas__item--yellow {
-      color: inherit;
-      background: var(--yellow-gradient); }
+    .start-now__cta-block > *:last-child {
+      margin-top: auto; }
   .start-now h3 {
     font-size: 1.8em;
     font-weight: 400; }
   .start-now__reasons {
+    flex: 2 0 0;
     padding: var(--section-padding);
     background: var(--yellow-gradient); }
     .start-now__reasons .start-now__symbol {
@@ -482,11 +501,16 @@ body {
         width: 32px;
         height: 32px;
         border: none;
+        border-radius: 2px;
         background-color: var(--white);
         box-shadow: var(--main-shadow);
-        transition: background-color 0.5s; }
+        transition: background-color 0.5s, transform 0.5s;
+        cursor: pointer; }
         .start-now__reasons .start-now__selectors .start-now__selector.start-now__selector--active {
-          background-color: var(--main-red); }
+          background-color: var(--main-red);
+          transform: scale(1.1);
+          rotate: 90deg;
+          transition: rotate 0.6s; }
 
 .job-opportunities {
   --num-box-size: 76px;
@@ -537,12 +561,13 @@ body {
 .team {
   --section-logo-size: 82px;
   padding: var(--section-padding); }
+  .team__header {
+    display: flex;
+    gap: var(--section-padding); }
   .team__logo {
-    float: left;
-    margin-right: var(--section-padding);
-    margin-bottom: var(--section-padding);
     width: var(--section-logo-size);
-    height: var(--section-logo-size); }
+    height: var(--section-logo-size);
+    flex-shrink: 0; }
     .team__logo svg {
       width: 100%;
       height: 100%; }
