@@ -380,82 +380,105 @@ body {
         .courses .main__content .main__cards-rect[data-color="yellow"] {
           background-color: var(--yellow); }
 
-.modules h2 {
-  font-size: 1.6rem;
+/* stylelint-disable no-invalid-position-at-import-rule */
+@media (min-width: 40em) {
+  .modules {
+    --blocks-gap: var(--section-padding);
+    --blocks-direction: row;
+    --selector-direction: column;
+    --selector-flex: 0 0 140px; } }
+
+@media (min-width: 52em) {
+  .modules {
+    --display-decor: block; } }
+
+.modules {
   padding: var(--section-padding); }
-
-.modules h3 {
-  font-size: 1.6rem; }
-
-.modules__selector {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(80px, 1fr)); }
-  .modules__selector-item {
-    aspect-ratio: 1;
+  .modules h2 {
+    font-size: 1.6rem;
+    padding: var(--section-padding); }
+  .modules h3 {
+    font-size: 1.6rem; }
+  .modules__blocks {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 4rem;
-    font-weight: 600;
-    text-shadow: var(--text-shadow);
-    cursor: pointer; }
-    .modules__selector-item[data-color="red"] {
-      color: var(--light-text-color);
-      background-color: var(--main-red-tr); }
-    .modules__selector-item[data-color="yellow"] {
-      color: var(--yellow);
-      background-color: var(--yellow-tr); }
-    .modules__selector-item[data-color="green"] {
-      color: var(--green);
-      background-color: var(--green-tr); }
-    .modules__selector-item.modules__selector-item--active[data-color="red"] {
-      color: var(--light-text-color);
+    flex-direction: var(--blocks-direction, column);
+    gap: var(--blocks-gap, 0); }
+  .modules__selector {
+    display: flex;
+    flex-direction: var(--selector-direction, row);
+    gap: var(--blocks-gap, 0);
+    flex: var(--selector-flex, 1); }
+    .modules__selector-item {
+      aspect-ratio: 1;
+      flex: var(--selector-flex, 1 0 80px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 4rem;
+      font-weight: 600;
+      text-shadow: var(--text-shadow);
+      cursor: pointer; }
+      .modules__selector-item[data-color="red"] {
+        color: var(--light-text-color);
+        background-color: var(--main-red-tr); }
+      .modules__selector-item[data-color="yellow"] {
+        color: var(--yellow);
+        background-color: var(--yellow-tr); }
+      .modules__selector-item[data-color="green"] {
+        color: var(--green);
+        background-color: var(--green-tr); }
+      .modules__selector-item.modules__selector-item--active[data-color="red"] {
+        color: var(--light-text-color);
+        background-color: var(--main-red); }
+      .modules__selector-item.modules__selector-item--active[data-color="yellow"] {
+        color: var(--light-text-color);
+        background-color: var(--yellow); }
+      .modules__selector-item.modules__selector-item--active[data-color="green"] {
+        color: var(--light-text-color);
+        background-color: var(--green); }
+  .modules__item {
+    flex: 1 0 0;
+    display: none;
+    padding: var(--section-padding);
+    color: var(--light-text-color); }
+    .modules__item.modules__item--active {
+      display: block; }
+    .modules__item[data-color="red"] {
       background-color: var(--main-red); }
-    .modules__selector-item.modules__selector-item--active[data-color="yellow"] {
-      color: var(--light-text-color);
+    .modules__item[data-color="yellow"] {
+      color: var(--main-text-color);
       background-color: var(--yellow); }
-    .modules__selector-item.modules__selector-item--active[data-color="green"] {
-      color: var(--light-text-color);
+      .modules__item[data-color="yellow"] .modules__item-shifts,
+      .modules__item[data-color="yellow"] .modules__item-content {
+        border-color: var(--main-text-color); }
+    .modules__item[data-color="green"] {
       background-color: var(--green); }
-
-.modules__item {
-  display: none;
-  padding: var(--section-padding);
-  color: var(--light-text-color); }
-  .modules__item.modules__item--active {
-    display: block; }
-  .modules__item[data-color="red"] {
-    background-color: var(--main-red); }
-  .modules__item[data-color="yellow"] {
-    color: var(--main-text-color);
-    background-color: var(--yellow); }
-    .modules__item[data-color="yellow"] .modules__item-shifts,
-    .modules__item[data-color="yellow"] .modules__item-content {
-      border-color: var(--main-text-color); }
-  .modules__item[data-color="green"] {
-    background-color: var(--green); }
-  .modules__item-shifts {
-    margin: 0;
-    padding: var(--section-padding) 0;
-    list-style: none;
-    border-top: 1px solid var(--light-text-color);
-    border-bottom: 1px solid var(--light-text-color);
+    .modules__item-shifts {
+      margin: 0;
+      padding: var(--section-padding) 0;
+      list-style: none;
+      border-top: 1px solid var(--light-text-color);
+      border-bottom: 1px solid var(--light-text-color);
+      display: flex;
+      justify-content: space-around; }
+    .modules__item-parts {
+      margin: 0;
+      padding: var(--section-padding) 0 var(--section-padding) 1em;
+      list-style: square; }
+    .modules__item-content {
+      border-top: 1px solid var(--light-text-color);
+      border-bottom: 1px solid var(--light-text-color); }
+  .modules__decor {
+    flex: 1 0 0;
+    display: var(--display-decor, none);
+    background: var(--main-blue-2);
+    color: var(--light-text-color); }
+  .modules__final-btns {
     display: flex;
-    justify-content: space-around; }
-  .modules__item-parts {
-    margin: 0;
-    padding: var(--section-padding) 0 var(--section-padding) 1em;
-    list-style: square; }
-  .modules__item-content {
-    border-top: 1px solid var(--light-text-color);
-    border-bottom: 1px solid var(--light-text-color); }
-
-.modules__final-btns {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  padding: var(--section-padding) 0;
-  gap: var(--section-padding); }
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: var(--section-padding) 0;
+    gap: var(--section-padding); }
 
 .start-now {
   display: flex;
