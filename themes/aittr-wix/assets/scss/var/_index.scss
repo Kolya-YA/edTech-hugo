@@ -32,17 +32,12 @@
     // Colors
     --main-red: var(--main-red-0);
     --main-red-tr: #bb191940;
-    // --main-red-tr: var(--main-red-1);
     --btn-grey: #618eab;
-    --green: #73bf5f;
-    // --green: var(--main-green-0);
-    --green-tr: #73bf5f40;
-    // --green-tr: var(--main-green-1);
+    --green: #06ba39;
+    --green-tr: #06ba3940;
     --blue: #0080ff;
     --yellow: #f6d927;
-    // --yellow: var(--main-yellow-0);
     --yellow-tr: #f6d92740;
-    // --yellow-tr: var(--main-yellow-1);
     --white: #ffffff;
     --dark-bgc: #1d1d1d;
     --dark-overlay-color: #1d1d1db0;
@@ -55,7 +50,7 @@
     --yellow-gradient: linear-gradient(90deg, #fff0a9 0%, #ffe052 100%);
     --yellow-gradient1: linear-gradient(90deg, #fff0a9 0%, var(--yellow) 100%);
 
-    // Fonts / typo
+    // Fonts & typo
     --text-shadow: 0 0 3px var(--dark-bgc);
     --text-shadow-light: 0 0 3px var(--light-text-color);
     --header-font-family: "Open Sans", sans-serif;

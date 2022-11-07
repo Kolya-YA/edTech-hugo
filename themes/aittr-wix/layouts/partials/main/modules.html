@@ -47,7 +47,21 @@
         </div>
         {{ end }}
         <div class="modules__decor">
-            Please wait, they are still editing the video.
+            {{ $phpath := (printf "images/%s" .Params.videoPH)  | relURL }}
+            {{ $videoWebMpath := (printf "videos/%s" .Params.videoWebM)  | relURL }}
+            {{ $videoMP4path := (printf "videos/%s" .Params.videoMP4)  | relURL }}
+            <video
+                height="100%" width="100%"
+                poster="{{ $phpath }}"
+                preload="metadata" loading="lazy"
+                autoplay loop muted
+            >
+                <source src="{{ $videoWebMpath }}" type="video/webm">
+                <source src="{{ $videoMP4path }}" type="video/mp4">
+                Please wait, they are still editing the video.
+            </video>
+            
+            
         </div>
     </div>
     {{ end }}

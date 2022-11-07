@@ -36,11 +36,16 @@
     @import "modules-item";
 
     &__decor {
+        overflow: hidden;
         flex: 1 0 0;
         display: var(--display-decor, none);
         background: var(--main-blue-2);
         color: var(--light-text-color);
 
+        video {
+            object-fit: cover;
+            filter: blur(2px);
+        }
     }
 
     &__final-btns {
