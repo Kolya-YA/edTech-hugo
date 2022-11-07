@@ -1,28 +1,25 @@
 .main {
-    .main-top {
-        // position: relative;
-        // display: flex;
-        // flex-direction: column;
-        // gap: 2px;   
-        // background-color: rgb(90, 169, 113);
+    @media (min-width: 52em) {
+        .main__content {
+            --main-display: grid;
+            --main-areas:
+                "hdr1 hdr1 hdr1 .   "
+                ".    img1 cont cont"
+                "img2 img1 cont cont"
+                "img2 .    btns .   "
+                "img2 img3 btns img4"
+                ".    img3 .    img4";
+        }
 
-        // &__bg {
-        //     position: absolute;
-        //     top: 0;
-        //     left: 0;
-        //     bottom: 0;
-        //     right: 0;
-        //     z-index: -1;
-        //     display: block;
-        //     line-height: 0;
-            
-        //     img {
-        //         width: 100%;
-        //         height: 100%;
-        //         object-fit: cover;
-        //     }
-        // }
+        .main__card {
+            --card-flex-dir: column-reverse;
+            --card-justify: flex-start;
+            --margin-00: 0;
+            --margin-03: -40px 0 0 -26px;
+            --margin-04: -70px 0 20px 0;
+            --card-ratio: auto;
+        }
     }
 
-    @import 'main__content';    
+    @import "main__content";
 }

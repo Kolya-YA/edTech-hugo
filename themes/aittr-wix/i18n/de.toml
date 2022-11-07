@@ -1,0 +1,14 @@
+[soon]
+    other = 'Schon bald'
+
+[now]
+    other = 'Melden Sie sich noch heute an!'
+
+['consult btn']
+    other = 'Mit einem Berater sprechen'
+
+['test btn']
+    other = 'Test machen'
+
+['free consult text']
+    other = 'Kostenlose Beratung durch einen Karrierespezialisten'
