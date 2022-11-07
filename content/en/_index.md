@@ -2,11 +2,11 @@
 date: "2022-06-20"
 title: "International School of Technology AIT TR"
 description: 'Learn fundamental IT skills. Improve your English proficiency. Land a job.'
-announce: 'ACCEPTANCE OF APPLICATIONS TO GROUPS IS OPEN UNTIL JULY 30'
+header: "Your new IT career"
 
 btns: [
   ['Take a test!', 'test', 'red'],
-  ['Fin out about the funding', 'fin-options', 'norm'],
+  ['Find out about the funding', 'fin-options', 'norm'],
 ]
 
 cards: [
@@ -16,8 +16,6 @@ cards: [
   ["Certificate that is recognised in Germany", "yellow", "card_pic04.webp"],
 ]
 ---
-
-# Your IT profession
 
 ## Your {{< accent >}}next{{< /accent >}} level
 

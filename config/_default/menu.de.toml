@@ -1,0 +1,75 @@
+[[top]]
+    name = "Startseite"
+    weight = 10
+    url = "#"
+[[top]]
+    name = "Test machen"
+    weight = 20
+    url = "#"
+[[top]]
+    name = "Finanzierung"
+    weight = 30
+    url = "#"
+[[top]]
+    name = "Über die Schule"
+    weight = 40
+    url = "#"
+[[top]]
+    name = "Kontakt"
+    weight = 50
+    url = "#"
+[[top]]
+    name = "Blog"
+    weight = 60
+    url = "#"
+
+[[footer]]
+    name = "Startseite"
+    weight = 10
+    url = "#"
+[[footer]]
+    name = "Über die AIT TR-Schule"
+    weight = 20
+    url = "#"
+[[footer]]
+    name = "Unser Ziel"
+    weight = 30
+    url = "#"
+[[footer]]
+    name = "Unsere Kusre"
+    weight = 40
+    url = "#"
+[[footer]]
+    name = "Blog"
+    weight = 50
+    url = "#"
+
+[[actions]]
+    name = "Test machen"
+    weight = 10
+    url = "#"
+[[actions]]
+    name = "Melden Sie sich für eine Beratung an"
+    weight = 20
+    url = "#"
+[[actions]]
+    name = "Informationen zur Finanzierung"
+    weight = 30
+    url = "#"
+[[actions]]
+    name = "Kontakt"
+    weight = 40
+    url = "#"
+
+[[legal]]
+    name = "Impressum"
+    weight = 10
+    url = "#"
+[[legal]]
+    name = "Privacy policy"
+    weight = 20
+    url = "#"
+[[legal]]
+    name = "Datenschutz"
+    weight = 30
+    url = "#"

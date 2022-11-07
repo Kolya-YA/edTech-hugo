@@ -50,3 +50,11 @@ disableKinds = ["taxonomy", "term"]
     [languages.de]
         contentDir = 'content/de'
         title = "AIT TR static site"
+        headerAnnounces = [
+            "Neuer Kurs beginnt am 31.10.2022",
+            "Spezialisten aus Deutschland und Israel",
+            "Gruppen von bis zu 15 Personen",
+            "6 Monate Ausbildung",
+            "1 Monat Projektentwicklung",
+            "Wir helfen Ihnen bei der Arbeitsuche",
+        ]
