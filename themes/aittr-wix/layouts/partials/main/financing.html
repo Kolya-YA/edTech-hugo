@@ -1,0 +1,36 @@
+{{ with .Site.GetPage "/financing" }}
+<section class="financing">
+    <div class="financing__content">
+        {{ .Content }}
+    </div>
+    <div class="financing__warning">
+        <div class="financing__warning-main">{{ .Params.warning.main }}</div>
+        <div class="financing__warning-comment">{{ .Params.warning.comment }}</div>
+    </div>
+    <div class="financing__btns">
+        {{ range .Params.btns}}
+        <a  href="#{{ index . 1 }}" class="link-btn" data-style="{{ index . 2 }}">{{ index . 0 }}</a>
+        {{ end }}
+    </div>
+    <ul class="financing__options">
+        {{ range .Params.finOptions }}
+        <li class="financing__item {{ with .bgColor }}financing__item--{{ . }}{{ end }}">
+            <div>{{ .bgColor }}</div>
+            <div class="financing__type">{{ .type }}</div>
+            <div class="financing__header">{{ .header }}</div>
+            <div class="financing__text">{{ .text }}</div>
+            <a href="#consult" class="link-btn" data-style={{ .btnColor }}>
+                {{ .btnLabel }}
+            </a>
+        </li>
+        {{ end }}
+    </ul>
+    <ul class="financing__backoffice">
+        {{ range .Params.backOffice }}
+            <li class="financing__person">
+                {{ .name }} — {{ .photo }}
+            </li>
+        {{ end }}
+    </ul>
+</section>
+{{ end }}
