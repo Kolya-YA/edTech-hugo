@@ -1,6 +1,6 @@
 {
   "name": "ait-tr",
-  "version": "1.0.0",
+  "version": "0.0.5",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -14,8 +14,8 @@
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.26.0",
     "stylelint": "^14.13.0",
-    "stylelint-config-standard": "^28.0.0",
-    "stylelint-config-standard-scss": "^5.0.0",
+    "stylelint-config-standard": "^29.0.0",
+    "stylelint-config-standard-scss": "^6.0.0",
     "stylelint-order": "^5.0.0",
     "stylelint-selector-bem-pattern": "^2.1.1"
   }
