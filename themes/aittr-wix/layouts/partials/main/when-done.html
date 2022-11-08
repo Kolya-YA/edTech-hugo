@@ -1,0 +1,30 @@
+<div>Success stories</div>
+{{ with .Site.GetPage "/when-done" }}
+<section class="when-done">
+    {{ .Content }}
+    <div class="when-done__aspects">
+        {{ range .Params.aspects }}
+        <div class="when-done__item">
+                ({{ .bgColor }} {{ .type }} {{ .size }})
+                {{ if (eq .type "logos") }}
+                    <ul class="when-done__logos-list">
+                        {{ range .logos }}
+                            <li class="when-done__logos-item">
+                                {{ . }}
+                            </li>
+                        {{ end }}
+                    </ul>
+                    <p>{{ .text }}</p>
+                {{ end }}
+                {{ if (eq .type "text") }}
+                    <p>{{ .header }}</p>
+                    <p>{{ .text }}</p>
+                    <a href="#{{ .btnlink }}" class="link-btn" data-style={{ .btnColor }}>
+                        {{ .btnLabel }}
+                    </a>
+                {{ end }}
+            </div>
+        {{ end }}
+    </div>
+</section>
+{{ end }}
