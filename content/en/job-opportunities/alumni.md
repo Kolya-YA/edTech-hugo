@@ -1,6 +1,6 @@
 ---
 date: "2022-10-24"
-title: "Посмотрите профили наших выпускников на LinkedIn"
+title: "Take a look at our alumni's LinkedIn profiles"
 weight: 70
 color: "blue"
 
