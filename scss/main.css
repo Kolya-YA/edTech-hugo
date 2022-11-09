@@ -33,6 +33,7 @@
   --main-text-color: #3b3b3b;
   --light-text-color: #f2f2f2;
   --light-text-color-tr: #f2f2f240;
+  --light-text-color-semitr: #f2f2f288;
   --color-tr: #00000000;
   --main-shadow: 0 0 6px #999999;
   --red-gradient: linear-gradient(90deg, var(--main-red) 0%, #7d1111 100%);
@@ -105,7 +106,7 @@ body {
 .link-btn {
   text-decoration: none;
   max-width: 320px;
-  width: clamp(240px, 100%, 320px);
+  width: clamp(220px, 100%, 320px);
   height: 42px;
   margin: 0 auto;
   display: flex;
@@ -526,6 +527,104 @@ body {
     justify-content: flex-start;
     padding: var(--section-padding) 0;
     gap: var(--section-padding); }
+
+/* stylelint-disable no-invalid-position-at-import-rule */
+.financing {
+  padding: var(--section-padding); }
+  .financing__top {
+    display: flex;
+    gap: var(--section-padding);
+    flex-wrap: wrap;
+    align-items: center; }
+  .financing__warning {
+    flex: 2 0 280px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--section-padding);
+    padding: var(--section-padding);
+    background-color: var(--yellow);
+    border: 1px solid var(--main-text-color);
+    border-radius: 6px; }
+    .financing__warning-icon {
+      flex: 0 0 80px;
+      width: 80px;
+      height: 80px;
+      margin-inline: auto; }
+      .financing__warning-icon svg {
+        width: 100%;
+        height: 100%; }
+    .financing__warning-text {
+      flex: 1 0 220px; }
+    .financing__warning-main {
+      color: var(--main-red);
+      font-size: 1.1em; }
+    .financing__warning-comment {
+      margin-top: var(--section-padding); }
+  .financing__btns {
+    flex: 1 0 280px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--section-padding); }
+  .financing__options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--section-padding);
+    margin: 0;
+    margin-top: var(--section-padding);
+    padding: 0;
+    list-style: none; }
+  .financing__item {
+    flex: 1 0 280px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 2px;
+    padding: var(--section-padding);
+    background-color: var(--main-red-tr); }
+    .financing__item--green {
+      background-color: var(--green-tr); }
+    .financing__item--yellow {
+      background-color: var(--yellow-tr); }
+    .financing__item .financing__type {
+      margin-inline-end: auto;
+      margin-bottom: var(--section-padding);
+      background-color: var(--light-text-color);
+      border-radius: 2px;
+      padding: calc(var(--section-padding) / 2) var(--section-padding);
+      font-size: 1.1em; }
+    .financing__item .financing__text {
+      margin-bottom: var(--section-padding); }
+    .financing__item .link-btn {
+      margin-top: auto; }
+  .financing__backoffice {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: calc(var(--section-padding) * 2);
+    row-gap: var(--section-padding);
+    margin: 0;
+    margin-top: var(--section-padding);
+    padding: 0;
+    list-style: none; }
+    .financing__backoffice .financing__person {
+      flex: 0 260px;
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      justify-content: end;
+      padding: calc(var(--section-padding) * 1.2) var(--section-padding);
+      aspect-ratio: 1;
+      border-radius: calc(var(--section-padding) * 1.5);
+      box-shadow: var(--main-shadow);
+      overflow: hidden;
+      background-color: var(--green-tr); }
+      .financing__backoffice .financing__person-photo {
+        position: absolute;
+        inset: 0 0 0 0; }
+      .financing__backoffice .financing__person-name {
+        padding-top: var(--section-padding);
+        border-top: 1px solid var(--light-text-color-semitr);
+        border-top: 1px solid var(--yellow-tr);
+        z-index: 10; }
 
 .start-now {
   display: flex;
