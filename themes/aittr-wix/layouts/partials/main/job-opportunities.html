@@ -1,37 +1,34 @@
+{{ with .Site.GetPage "/job-opportunities" }}
+{{ $page := . }}
 <section class="job-opportunities">
-    {{ with .Site.GetPage "/job-opportunities" }}
-    {{ $page := . }}
+    <div class="job-opportunities__top">
         <h2>{{ .Title }}</h2>
-        {{ .Content }}
-        {{ range  .Pages.ByWeight  }}
-            {{ $color := .Params.color }}
-            <article
-                class="job-opportunities__item{{ with $color }} job-opportunities__item--{{ . }}{{ end -}}">
-                {{ with .Title }}
-                    <h3 class="job-opportunities__item-header">{{ . }}</h3>
-                {{ end }}
-                {{ .Content }}
-                {{ with .Params.btn }}
-                    <a
-                        href="{{ .Link }}" target="_blank"
-                        rel="noopener noreferrer" class="link-btn"
-                        {{ with $color }} data-style={{ . }} {{ end }}
-                        >{{ .Text }}
-                    </a>
-                {{ end }}
-                {{ with .Params.Number}}
-                    <div class="job-opportunities__item-number">{{ . }}</div>
-                {{ end }}
-                {{ if .Params.bgimg.src }}
-                    {{ $img := $page.Resources.GetMatch .Params.bgimg.src }}
-                    {{ $img := $img.Resize "340x q90" }}
-                    <div class="job-opportunities__item-bgpic">
-                        <img class="" loading="lazy"
-                            src="{{ $img.RelPermalink }}" alt="{{ .Params.bgimg.alt }}"
-                            width="{{ $img.Width}}" height="{{ $img.Height }}">
-                    </div>
-                {{ end }}
+        <div class="job-opportunities__top--text">{{ .Content }}</div>
+    </div>
+    <div class="job-opportunities__list">
+        {{ range .Pages.ByWeight  }}
+        {{ $color := .Params.color }}
+        <article class="job-opportunities__item{{ with $color }} job-opportunities__item--{{ . }}{{ end -}}">
+            {{ with .Title }}<h3 class="job-opportunities__item-header">{{ . }}</h3>{{ end }}
+            {{ .Content }}
+            {{ with .Params.btn }}
+                <a href="{{ .Link }}" target="_blank"
+                    rel="noopener noreferrer" class="link-btn"
+                    {{ with $color }} data-style={{ . }} {{ end }}
+                >{{ .Text }}</a>
+            {{ end }}
+            {{ with .Params.Number}}<div class="job-opportunities__item-number">{{ . }}</div>{{ end }}
+            {{ if .Params.bgimg.src }}
+                {{ $img := $page.Resources.GetMatch .Params.bgimg.src }}
+                {{ $img := $img.Resize "340x q90" }}
+                <div class="job-opportunities__item-bgpic">
+                    <img class="" loading="lazy"
+                        src="{{ $img.RelPermalink }}" alt="{{ .Params.bgimg.alt }}"
+                        width="{{ $img.Width}}" height="{{ $img.Height }}">
+                </div>
+            {{ end }}
             </article>
         {{ end }}
-    {{ end }}
+    </div>
 </section>
+{{ end }}
