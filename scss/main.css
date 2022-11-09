@@ -37,6 +37,7 @@
   --color-tr: #00000000;
   --main-shadow: 0 0 6px #999999;
   --red-gradient: linear-gradient(90deg, var(--main-red) 0%, #7d1111 100%);
+  --red-gradient-r: linear-gradient(90deg, #7d1111 0%, var(--main-red) 70%);
   --yellow-gradient: linear-gradient(90deg, #fff0a9 0%, #ffe052 100%);
   --yellow-gradient1: linear-gradient(90deg, #fff0a9 0%, var(--yellow) 100%);
   --text-shadow: 0 0 3px var(--dark-bgc);
@@ -272,10 +273,15 @@ body {
   grid-template-rows: auto 40px auto 80px 100px 40px;
   grid-template-areas: "hdr1 hdr1 hdr1 .   " ".    img1 cont cont" "img2 img1 cont cont" "img2 .    btns .   " "img2 img3 btns img4" ".    img3 .    img4"; }
   .main .main__content h1 {
-    font-size: 3rem;
-    color: var(--main-red-4);
-    text-shadow: 16px 10px 8px var(--green-tr);
-    grid-area: hdr1; }
+    font-size: 3em;
+    line-height: 1;
+    text-shadow: 12px 8px 14px var(--main-red-tr);
+    grid-area: hdr1;
+    margin-inline-end: auto;
+    color: transparent;
+    background-image: var(--red-gradient-r);
+    background-clip: text;
+    -webkit-background-clip: text; }
   .main .main__content h2 {
     font-size: 2.2rem; }
   .main .main__content-text {
