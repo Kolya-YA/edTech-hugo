@@ -684,12 +684,25 @@ body {
 .job-opportunities {
   --num-box-size: 76px;
   padding: var(--section-padding); }
+  .job-opportunities__top {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--section-padding);
+    align-items: baseline; }
+    .job-opportunities__top h2 {
+      font-size: 2.2em;
+      flex: 1 1 340px; }
+    .job-opportunities__top--text {
+      flex: 3 1 340px; }
+  .job-opportunities__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    grid-auto-rows: 1fr;
+    gap: var(--section-padding); }
   .job-opportunities__item {
     position: relative;
-    aspect-ratio: 1;
     display: flex;
     flex-direction: column;
-    margin-bottom: var(--section-padding);
     padding: var(--section-padding);
     padding-bottom: var(--num-box-size);
     border: 1px solid var(--main-text-color);
@@ -726,6 +739,10 @@ body {
       position: absolute;
       inset: 0 0 0 0;
       background-color: var(--btn-grey); }
+      .job-opportunities__item .job-opportunities__item-bgpic img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; }
 
 .team {
   --section-logo-size: 82px;
