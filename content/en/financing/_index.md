@@ -17,31 +17,31 @@ finOptions:
         text: "Вы закончили школу и ищите новую перспективную профессию? Вам нужен ausbildung? В каждом наборе мы предоставляем несколько мест с финансированием от Сената 100% оплата за счет государства."
         bgColor: "red"
         btnLabel: "Contact a consultant"
-        btnColor: "tr-white"
+        btnColor: ""
 
     -   type: "JobCenter, Arbeitsagentur"
         header: "100% оплата за счет государства"
         text: "Вы состоите на учете в JobCenter или Arbeitsagentur? Находитесь под угрозой увольнения? Вы можете получить бильдунг гутшайн!"
         bgColor: "green"
         btnLabel: "Contact a consultant"
-        btnColor: "tr-white"
+        btnColor: ""
 
     -   type: "IT-грант"
         header: "до 85% cубсидирование от IT компаний"
         text: "Вы хотите получить гарантированное рабочее место? Прошли на отлично наш тест для поступления на программу? В каждом наборе Вы можете получить место с частичным финансированием от ИТ компаний. 25%–30% оплачиваете Вы — 75%–85% за счет компании. В случае успешного завершения курса, компания партнер имеет доступ к Вашему резюме в первую очередь."
         bgColor: "yellow"
         btnLabel: "Take a test"
-        btnColor: "tr-white"
+        btnColor: ""
 
 backOffice:
     -   name: "Anzhela Guseinova"
-        photo: "photo01"
+        photo: "agus.webp"
         position: ""
     -   name: "Anna Golovacheva"
-        photo: "photo02"
+        photo: "agol.webp"
         position: ""
     -   name: "Dilara Latfullina"
-        photo: "photo03"
+        photo: "dlat.webp"
         position: ""
 ---
 

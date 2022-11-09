@@ -1,0 +1,37 @@
+&__backoffice {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: calc(var(--section-padding) * 2);
+    row-gap: var(--section-padding);
+    margin: 0;
+    margin-top: var(--section-padding);
+    padding: 0;
+    list-style: none;
+
+    .financing__person {
+        flex: 0 260px;
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        justify-content: end;
+        padding: calc(var(--section-padding) * 1.2) var(--section-padding);
+        aspect-ratio: 1;
+        border-radius: calc(var(--section-padding) * 1.5);
+        box-shadow: var(--main-shadow);
+        overflow: hidden;
+        background-color: var(--green-tr);
+
+        &-photo {
+            position: absolute;
+            inset: 0 0 0 0;
+        }
+
+        &-name {
+            padding-top: var(--section-padding);
+            border-top: 1px solid var(--light-text-color-semitr);
+            border-top: 1px solid var(--yellow-tr);
+            z-index: 10;
+        }
+    }
+}
