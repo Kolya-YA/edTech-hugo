@@ -53,7 +53,7 @@
         <li class="financing__person">
             {{ with $page.Resources.GetMatch .photo }}
             {{ $img := .Resize "260x q90" }}
-            <img class="financing__person-photo" 
+            <img class="financing__person-photo" loading="lazy"
                 src="{{ $img.RelPermalink }}" alt="team photo"
                 width="{{ $img.Width}}" height="{{ $img.Height }}">
             {{ end }}
