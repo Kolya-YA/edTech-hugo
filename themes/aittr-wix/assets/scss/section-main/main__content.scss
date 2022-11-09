@@ -14,10 +14,17 @@
         ".    img3 .    img4";
 
     h1 {
-        font-size: 3rem;
-        color: var(--main-red-4);
-        text-shadow: 16px 10px 8px var(--green-tr);
+        font-size: 3em;
+        line-height: 1;
+
+        // color: var(--main-red-4);
+        text-shadow: 12px 8px 14px var(--main-red-tr);
         grid-area: hdr1;
+        margin-inline-end: auto;
+        color: transparent;
+        background-image: var(--red-gradient-r);
+        background-clip: text;
+        -webkit-background-clip: text;
     }
 
     h2 {
