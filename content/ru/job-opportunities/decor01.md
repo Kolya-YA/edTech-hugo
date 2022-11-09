@@ -1,8 +1,9 @@
 ---
 date: "2022-10-24"
 weight: 10
-bgPic: 
+
+bgimg:
     alt: "Belin helicopter view"
-    src: "bg-pic-01"
+    src: "uberber.webp"
 ---
  
