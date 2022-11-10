@@ -13,8 +13,9 @@
             <div class="cert__img">
                 {{ $certimg := $photos.GetMatch .Params.cert }}
                 {{ with $certimg }}
-                {{ $img := .Resize "220x webp text" }}
-                <img src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}" loading="lazy">
+                {{/*  {{ $img := .Resize "220x webp text" }}  */}}
+                {{/*  <img src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}" loading="lazy">  */}}
+                {{ partial "img-dialog" . }}
                 {{ end }}
             </div>
             <div class="cert__content">
