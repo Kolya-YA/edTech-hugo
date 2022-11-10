@@ -2,6 +2,11 @@
 date: "2022-10-20"
 title: "Branches and certifications"
 weight: 30
+logos: [
+    "/svg/dekra.svg",
+    "/svg/iso.svg",
+    "/svg/dakks.svg",
+]
 ---
 
 AIT TR is a certified training center in Israel, Germany, USA, and Canada.
