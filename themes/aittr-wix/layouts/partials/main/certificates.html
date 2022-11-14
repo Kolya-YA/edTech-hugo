@@ -4,31 +4,32 @@
         <div class="certificates__logo">
             <svg><use xlink:href="#logo-min"></use></svg>
         </div>
-        <div class="cerificates__text">
+        <div class="certificates__text">
             {{ .Content }}
         </div>
     </div>
 
     <ul class="certificates__list">
-        {{ $photos := .Resources.ByType "image" }}
+        {{ $images := .Resources.ByType "image" }}
         {{ range .Pages.ByWeight }}
+        {{ $certimg := $images.GetMatch .Params.cert }}
         <li class="certificates__item cert">
-            <div class="cert__title">{{ .Title }}</div>
+            <h3 class="cert__title">{{ .Title }}</h3>
+            {{ with $certimg }}
             <div class="cert__img">
-                {{ $certimg := $photos.GetMatch .Params.cert }}
-                {{ with $certimg }}
-                {{/*  {{ $img := .Resize "220x webp text" }}  */}}
-                {{/*  <img src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}" loading="lazy">  */}}
                 {{ partial "img-dialog" . }}
-                {{ end }}
             </div>
+            {{ end }}
             <div class="cert__content">
                 {{ .Content }}                
             </div>
             {{ if .Params.logos }}
             <div class="cert__logos">
                 {{ range .Params.logos }}
-                — {{ . }} — 
+                <div class="cert__logos-item">
+                    {{ $logo := $images.GetMatch . }}
+                    <img src="{{ $logo.RelPermalink }}" alt="icon">
+                </div>
                 {{ end }}
             </div>
             {{ end }}
