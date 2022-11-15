@@ -1,8 +1,8 @@
 ---
-date: "2022-10-18"
-title: "Backend програмирование"
-weight: 5
-ready: false
+date: "2022-11-15"
+title: "Java Backend developer"
+weight: 40
+ready: true
 id: 'backend'
 
 timing: [

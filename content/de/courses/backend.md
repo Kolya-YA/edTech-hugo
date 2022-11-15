@@ -1,12 +1,12 @@
 ---
 date: "2022-10-18"
-title: "Backend програмирование"
-weight: 5
-ready: false
+title: "Java Backend developer"
+weight: 40
+ready: true
 id: 'backend'
 
 timing: [
-    "6 мес. / 960 академ. часов"
+    "6 Monate / 960 Stunden"
 ]
 
 parts: [
