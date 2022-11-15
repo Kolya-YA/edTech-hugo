@@ -39,7 +39,7 @@
         {{ range .Params.finOptions }}
         <li class="financing__item {{ with .bgColor }}financing__item--{{ . }}{{ end }}">
             <div class="financing__type">{{ .type }}</div>
-            <div class="financing__header">{{ .header }}</div>
+            <h3 class="financing__header">{{ .header }}</h3>
             <div class="financing__text">{{ .text }}</div>
             <a href="#consult" class="link-btn" data-style={{ .btnColor }}>
                 {{ .btnLabel }}
