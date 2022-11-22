@@ -105,6 +105,13 @@
     event.preventDefault();
   });
 
+  // ns-hugo:/home/runner/work/edTech-hugo/edTech-hugo/themes/aittr-wix/assets/js/modules/back-to-top.js
+  var btnBTT = document.querySelector(".back-to-top");
+  window.addEventListener("scroll", () => {
+    const isBtnVisible = window.scrollY > window.innerHeight * 0.75;
+    btnBTT.style.visibility = isBtnVisible ? "visible" : "hidden";
+  });
+
   // ns-hugo:/home/runner/work/edTech-hugo/edTech-hugo/themes/aittr-wix/assets/js/modules/separator.js
   var separators = document.querySelectorAll(".separator");
   var observer = new IntersectionObserver((entries) => {
