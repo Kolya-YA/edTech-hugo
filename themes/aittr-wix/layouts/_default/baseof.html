@@ -2,12 +2,13 @@
 <html lang="{{ site.LanguageCode | default "en" }}">
 {{- partial "head.html" . -}}
 
-<body>    
+<body id="top">
     {{- partial "header.html" . -}}
     <div id="content">
         {{- block "main" . }}{{- end }}
     </div>
     {{ partial "separator" }}
+    {{ partial "back-to-top" }}
     {{- partial "footer/footer" . -}}
     {{ partial "svg-icons" }}
     {{- partial "footer-scripts.html" . -}}

@@ -1,0 +1,29 @@
+.back-to-top {
+    --btt-size: 46px;
+
+    position: fixed;
+    right: calc(var(--section-padding) * 1.2);
+    bottom: calc(var(--section-padding) * 4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--btt-size);
+    height: var(--btt-size);
+    background-color: var(--main-red-tr);
+    border-radius: 15%;
+    box-shadow: var(--main-shadow);
+    visibility: hidden;
+
+    &__arrow {
+        position: fixed;
+        width: calc(var(--btt-size) / 2);
+        height: calc(var(--btt-size) / 2);
+        border-left: solid;
+        border-top: solid;
+        border-width: 3px;
+        border-color: var(--btn-grey);
+        transform:
+            translateY(calc(var(--btt-size) / 7))
+            rotate(45deg);
+    }
+}
