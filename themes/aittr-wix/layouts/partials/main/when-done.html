@@ -1,27 +1,36 @@
-<div>Success stories</div>
 {{ with .Site.GetPage "/when-done" }}
 <section class="when-done">
     {{ .Content }}
     <div class="when-done__aspects">
         {{ range .Params.aspects }}
-        <div class="when-done__item">
-                ({{ .bgColor }} {{ .type }} {{ .size }})
-                {{ if (eq .type "logos") }}
-                    <ul class="when-done__logos-list">
-                        {{ range .logos }}
-                            <li class="when-done__logos-item">
-                                {{ . }}
-                            </li>
-                        {{ end }}
-                    </ul>
-                    <p>{{ .text }}</p>
+        {{ $logos := .logos }}
+        <div class="when-done__item
+            {{- with .bgColor }} when-done__item--{{ . }}{{ end }}
+            {{- if .logos }} when-done__item--logos{{ end }}
+            {{- if .size }} when-done__item--double{{ end }}
+            {{- with .bgColor }} when-done__item--{{ . }}{{ end -}}
+            ">
+                {{ with .size }}({{ . }} size){{ end }}
+                {{ if  .logos  }}{{ else }}
+                <div class="when-done__item-logo">
+                    <svg><use xlink:href="#logo-min"></use></svg>
+                </div>
                 {{ end }}
-                {{ if (eq .type "text") }}
-                    <p>{{ .header }}</p>
-                    <p>{{ .text }}</p>
-                    <a href="#{{ .btnlink }}" class="link-btn" data-style={{ .btnColor }}>
-                        {{ .btnLabel }}
-                    </a>
+                {{ if .logos }}
+                <ul class="when-done__logos-list">
+                    {{ range .logos }}
+                        <li class="when-done__logos-item">
+                            {{ . }}
+                        </li>
+                    {{ end }}
+                </ul>
+                {{ end }}
+                {{ with .header }}<h3>{{ . }}</h3>{{ end }}
+                {{ with .text }}<p{{ if $logos }} class="when-done__logos-text"{{ end }}>{{ . }}</p>{{ end }}
+                {{ with .btn }}
+                <a href="#{{ .link }}" class="link-btn" data-style={{ .color }}>
+                    {{ .label }}
+                </a>
                 {{ end }}
             </div>
         {{ end }}

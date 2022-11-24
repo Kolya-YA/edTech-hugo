@@ -1,0 +1,77 @@
+svg path {
+    
+}
+
+.when-done {
+    padding: var(--section-padding);
+
+    &__aspects {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--section-padding)
+
+    }
+
+    &__logos-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: calc(var(--section-padding) / 3);
+
+    }
+
+    &__logos-item {
+        display: block;
+        width: 80px;
+        height: 80px;
+        background-color: rgb(255, 127, 208);
+        text-align: center;
+        overflow: hidden;
+    }
+
+    &__logos-text {
+        padding: var(--section-padding);
+        text-align: center;
+    }
+
+    .when-done__item {
+        flex: 1 0 320px;
+        padding: var(--section-padding);
+
+        &-logo {
+            width: 68px;
+            line-height: 0;
+            margin-bottom: var(--section-padding);
+
+            svg {
+                width: 100%;
+                height: 68px;
+            }
+        }
+
+        &--double {
+            // flex-grow: 2;
+        }
+
+        &--yellow {
+            background-color: var(--yellow);
+        }
+
+        &--gray {
+            background-color: var(--light-text-color);
+        }
+
+        &--red {
+            color: var(--light-text-color);
+            background-color: var(--main-red);
+
+            svg {
+                fill: inherit;
+                fill: var(--light-text-color);
+            }
+        }
+    }
+}
