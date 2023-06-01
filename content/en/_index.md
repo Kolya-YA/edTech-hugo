@@ -5,7 +5,7 @@ description: 'Learn fundamental IT skills. Improve your English proficiency. Lan
 header: "Your new IT career"
 
 btns: [
-  ['Take a test', 'test', 'red'],
+  ['Test test test', 'test', 'red'],
   ['Find out about the funding', 'fin-options', 'norm'],
 ]
 
